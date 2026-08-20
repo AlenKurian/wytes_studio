@@ -25,7 +25,7 @@ const CARDS: ServiceCard[] = [
   {
     title: "Digital",
     tagline: "Strategy transformed into experience",
-    services: ["Digital Strategy", "Website Strategy", "UI / UX Design", "Website Developement", "Corporate Websites", "Landing Pages", "E-Commerce", "Digital Systems"],
+    services: ["Digital Strategy", "Website Strategy", "UI / UX Design", "Website Development", "Corporate Websites", "Landing Pages", "E-Commerce", "Digital Systems"],
     bg: "bg-wytes-orange",
   },
   {
