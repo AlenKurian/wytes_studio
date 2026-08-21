@@ -4,7 +4,7 @@ import { useRef, type MouseEvent as ReactMouseEvent } from "react";
 import Image from "next/image";
 import { PillButton } from "@/components/ui/PillButton";
 import { useLenis } from "@/hooks/useLenis";
-import { SECTION_IDS, STUDIO_EMAIL, NAV_HEIGHT } from "@/constants/nav";
+import { SECTION_IDS, STUDIO_EMAIL } from "@/constants/nav";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -15,12 +15,6 @@ export function Hero() {
     if (!lenis) return;
     event.preventDefault();
     lenis.scrollTo(`#${SECTION_IDS.about}`, { duration: 1.4 });
-  }
-
-  function handleWorksClick(event: ReactMouseEvent<HTMLAnchorElement>) {
-    if (!lenis) return;
-    event.preventDefault();
-    lenis.scrollTo(`#${SECTION_IDS.about}`, { offset: -NAV_HEIGHT, duration: 1.4 });
   }
 
   return (
@@ -80,16 +74,6 @@ export function Hero() {
             >
               Start a Project
             </PillButton>
-
-            <PillButton
-              href={`#${SECTION_IDS.about}`}
-              onClick={handleWorksClick}
-              variant="outline"
-              className="!border-black !text-black hover:!bg-black/10"
-              data-nav-theme="light"
-            >
-              View Our Work
-            </PillButton>
           </div>
         </div>
 
@@ -97,7 +81,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="light"
-          className="group mt-10 ml-auto flex w-fit translate-x-6 items-center gap-3 font-body text-xs font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:translate-x-10"
+          className="group mt-10 ml-auto flex w-fit items-center gap-3 font-body text-xs font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:translate-x-10"
         >
           <span className="animate-bounce flex h-11 w-11 items-center justify-center rounded-full border border-black">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-6 w-6">
