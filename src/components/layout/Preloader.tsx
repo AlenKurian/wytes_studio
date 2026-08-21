@@ -52,13 +52,15 @@ function bgPos(index: number) {
 
 export function Preloader() {
   const reducedMotion = useReducedMotion();
+  const [percent, setPercent] = useState(0);
   const [done, setDone] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const pieceRefs = useRef<(HTMLDivElement | null)[]>([]);
   const wordmarkRef = useRef<HTMLSpanElement>(null);
   const subtitleRef = useRef<HTMLSpanElement>(null);
-  const subtitleRevealRef = useRef<HTMLSpanElement>(null);
+  const percentRef = useRef<HTMLSpanElement>(null);
+  const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (reducedMotion) {
@@ -79,6 +81,7 @@ export function Preloader() {
       [starts[i], starts[j]] = [starts[j], starts[i]];
     }
 
+    const counter = { value: 0 };
     const tl = gsap.timeline({
       onComplete: () => {
         html.style.overflow = "";
@@ -120,13 +123,24 @@ export function Preloader() {
         { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.8)" },
         maxFlightEnd - 0.35
       )
-      .set(subtitleRef.current, { opacity: 1 })
       .fromTo(
-        subtitleRevealRef.current,
-        { clipPath: "inset(0 100% 0 0)" },
-        { clipPath: "inset(0 0% 0 0)", duration: 1.6, ease: "power2.inOut" },
-        "-=0.05"
+        subtitleRef.current,
+        { opacity: 0, y: 10, letterSpacing: "0.1em" },
+        { opacity: 1, y: 0, letterSpacing: "0.35em", duration: 0.55, ease: "power2.out" },
+        "-=0.3"
       )
+      .fromTo(percentRef.current, { opacity: 0 }, { opacity: 1, duration: 0.4 }, "-=0.2")
+      .to(
+        counter,
+        {
+          value: 100,
+          duration: 1.6,
+          ease: "power2.inOut",
+          onUpdate: () => setPercent(Math.round(counter.value)),
+        },
+        "-=0.1"
+      )
+      .fromTo(progressRef.current, { width: "0%" }, { width: "100%", duration: 1.6, ease: "power2.inOut" }, "<")
       .to(contentRef.current, {
         opacity: 0,
         scale: 0.92,
@@ -165,7 +179,7 @@ export function Preloader() {
 
         <div
           ref={contentRef}
-          className="relative grid h-72 w-72 grid-cols-3 grid-rows-3 rounded-[2rem] shadow-[0_25px_70px_rgba(255,80,0,0.45)] ring-1 ring-white/40 will-change-transform sm:h-80 sm:w-80"
+          className="relative grid h-56 w-56 grid-cols-3 grid-rows-3 rounded-[2rem] shadow-[0_25px_70px_rgba(255,80,0,0.45)] ring-1 ring-white/40 will-change-transform sm:h-64 sm:w-64"
         >
           {PIECES.map(({ row, col }, index) => (
             <div
@@ -191,23 +205,26 @@ export function Preloader() {
 
             <span
               ref={wordmarkRef}
-              className="relative font-logo text-2xl italic text-wytes-ink sm:text-5xl"
+              className="relative font-logo text-2xl italic text-wytes-ink sm:text-3xl"
             >
               WYTES
             </span>
-
             <span
               ref={subtitleRef}
-              className="relative mt-1.5 font-logo text-xs tracking-[0.3em] opacity-0 sm:text-sm"
+              className="relative font-logo text-[0.6rem] tracking-[0.3em] text-wytes-ink/70 sm:text-xs"
             >
-              <span className="text-wytes-ink/10">THE COMPLETE STUDIO</span>
-              <span
-                ref={subtitleRevealRef}
-                className="absolute inset-0 text-wytes-ink/70"
-                style={{ clipPath: "inset(0 100% 0 0)" }}
-              >
-                THE COMPLETE STUDIO
-              </span>
+              THE COMPLETE STUDIO
+            </span>
+
+            <div className="relative mt-3 h-[3px] w-24 overflow-hidden rounded-full bg-wytes-ink/15 sm:w-28">
+              <div ref={progressRef} className="h-full w-0 rounded-full bg-wytes-ink/70" />
+            </div>
+
+            <span
+              ref={percentRef}
+              className="relative mt-1.5 font-logo text-[0.6rem] tracking-[0.3em] text-wytes-ink/45 tabular-nums"
+            >
+              {String(percent).padStart(3, "0")}%
             </span>
           </div>
         </div>

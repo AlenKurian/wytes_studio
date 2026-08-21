@@ -11,7 +11,7 @@ export function AboutHero() {
       <div className="mx-auto max-w-4xl px-6 text-center md:px-10">
         <RevealOnScroll>
           <h1 className="-mt-12 font-display text-lg uppercase tracking-[0.3em] text-wytes-cream/80 sm:text-xl">
-            About Us
+            About Wytes
           </h1>
         </RevealOnScroll>
 

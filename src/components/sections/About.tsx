@@ -11,7 +11,7 @@ export function About() {
       <div className="mx-auto max-w-5xl px-6 pb-24 pt-16 text-center md:px-10 md:pb-32 md:pt-20">
         <RevealOnScroll>
           <span className="block font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-ink">
-            About Us
+            About Wytes
           </span>
           <h2
             className="mt-20 font-display text-3xl uppercase leading-tight text-wytes-ink sm:text-5xl md:text-6xl"
