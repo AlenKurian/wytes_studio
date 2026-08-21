@@ -41,25 +41,25 @@ export function Hero() {
             className="font-hero-serif uppercase leading-[0.95] text-black"
             data-nav-theme="light"
           >
-            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
+            <span className="block text-2xl sm:text-4xl md:text-5xl lg:text-5xl">
               <span className="font-medium italic"></span>
               <span className="font-bold not-italic">Your</span>
             </span>
-            <span className="block text-5xl font-black sm:text-6xl md:text-7xl lg:text-8xl">
+            <span className="block text-4xl font-black sm:text-6xl md:text-7xl lg:text-8xl">
               BRAND
             </span>
             <br />
-            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
+            <span className="block text-2xl sm:text-4xl md:text-5xl lg:text-5xl">
               <span className="font-medium italic">A </span>
               <span className="font-bold not-italic">Bussiness</span>
             </span>
-            <span className="block text-5xl font-black sm:text-6xl md:text-7xl lg:text-8xl">
+            <span className="block text-4xl font-black sm:text-6xl md:text-7xl lg:text-8xl">
               decision
             </span>
           </h1>
 
           <p
-            className="mt-6 max-w-xl text-left font-body text-base text-black sm:text-lg"
+            className="mt-6 max-w-xl text-left font-body text-sm text-black sm:text-base md:text-lg"
             data-nav-theme="light"
           >
             Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy — not decoration.
@@ -81,14 +81,18 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="light"
-          className="group mt-10 ml-auto flex w-fit items-center gap-3 font-body text-xs font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:translate-x-10"
+          className="group mt-10 flex w-full flex-col items-center gap-3 font-body text-[10px] font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:ml-auto md:w-fit md:flex-row md:translate-x-10 md:text-xs"
         >
-          <span className="animate-bounce flex h-11 w-11 items-center justify-center rounded-full border border-black">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-6 w-6">
-              <path d="M12 4v17m0 0-6-6m6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+          <span className="flex w-full items-center justify-center gap-3 md:w-auto">
+            <span className="h-px w-16 bg-wytes-orange/60 md:hidden" />
+            <span className="animate-bounce flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-wytes-orange text-wytes-orange md:h-11 md:w-11 md:border-black md:text-black">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-5 w-5 md:h-6 md:w-6">
+                <path d="M12 4v17m0 0-6-6m6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            <span className="h-px w-16 bg-wytes-orange/60 md:hidden" />
           </span>
-          Scroll to explore
+          <span className="shrink-0">Scroll to explore</span>
         </a>
       </div>
     </section>

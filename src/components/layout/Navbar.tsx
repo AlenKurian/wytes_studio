@@ -114,7 +114,7 @@ export function Navbar() {
         </a>
 
         <div className="flex items-center gap-3">
-          <span ref={buttonWrapRef} className="hidden sm:inline-flex">
+          <span ref={buttonWrapRef} className="inline-flex">
             <PillButton
               href={`mailto:${STUDIO_EMAIL}`}
               variant="outline"
