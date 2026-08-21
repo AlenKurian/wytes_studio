@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { SECTION_IDS, STUDIO_EMAIL } from "@/constants/nav";
 
-const FOOTER_COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
+const FOOTER_COLUMNS: {
+  title: string;
+  links: { label: string; href: string; external?: boolean }[];
+}[] = [
   {
     title: "Quick Links",
     links: [
@@ -23,9 +26,17 @@ const FOOTER_COLUMNS: { title: string; links: { label: string; href: string }[] 
   {
     title: "Social",
     links: [
-      { label: "Instagram", href: "https://instagram.com" },
-      { label: "LinkedIn", href: "https://linkedin.com" },
-      { label: "Facebook", href: "https://facebook.com" },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/wytes.in?igsi=Z3lrcGpkcXowZXBy",
+        external: true,
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/wytes-studio",
+        external: true,
+      },
+      { label: "Facebook", href: "https://facebook.com", external: true },
     ],
   },
 ];
@@ -56,6 +67,8 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
                     className="font-body text-sm text-wytes-ink/60 transition-colors duration-300 hover:text-wytes-ink"
                   >
                     {link.label}
