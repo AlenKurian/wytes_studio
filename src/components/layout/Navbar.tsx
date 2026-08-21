@@ -78,7 +78,7 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="fixed inset-x-0 top-0 z-50">
-      <nav className="relative flex items-center justify-between px-6 py-6 md:px-10">
+      <nav className="relative flex items-center justify-between px-4 py-4 md:px-10 md:py-6">
         <div
           ref={linksWrapRef}
           className="absolute left-1/2 top-1/2 hidden translate-x-[-50%] translate-y-[-40%] items-center gap-25 sm:flex"
@@ -106,7 +106,7 @@ export function Navbar() {
           href={isHome ? `#${SECTION_IDS.hero}` : "/"}
           onClick={handleAnchorClick(SECTION_IDS.hero)}
           className={clsx(
-            "font-logo text-3xl italic transition-colors duration-300 sm:text-4xl",
+            "font-logo text-2xl italic transition-colors duration-300 sm:text-4xl",
             logoLight ? "text-black" : "text-white"
           )}
         >
@@ -145,7 +145,7 @@ export function Navbar() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
             className={clsx(
-              "relative z-10 flex h-10 w-10 flex-col items-center justify-center gap-1.5 sm:hidden",
+              "relative z-10 flex h-8 w-8 flex-col items-center justify-center gap-1 sm:hidden",
               menuOpen ? "text-white" : logoLight ? "text-black" : "text-white"
             )}
           >
@@ -173,7 +173,7 @@ export function Navbar() {
 
       <div
         className={clsx(
-          "fixed inset-0 z-0 flex flex-col items-center justify-center gap-8 bg-wytes-ink text-wytes-cream transition-opacity duration-300 sm:hidden",
+          "fixed inset-0 z-0 flex flex-col items-center justify-center gap-6 bg-wytes-ink text-wytes-cream transition-opacity duration-300 sm:hidden",
           menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         )}
       >
@@ -182,7 +182,7 @@ export function Navbar() {
             key={link.href}
             href={link.href}
             onClick={() => setMenuOpen(false)}
-            className="font-body text-2xl font-semibold uppercase tracking-[0.15em]"
+            className="font-body text-xl font-semibold uppercase tracking-[0.15em]"
           >
             {link.label}
           </Link>

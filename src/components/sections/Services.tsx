@@ -21,31 +21,31 @@ export function Services() {
     <>
       <section
         id={SECTION_IDS.services}
-        className="bg-wytes-cream pb-10 pt-8 md:pb-14 md:pt-12"
+        className="bg-wytes-cream pb-6 pt-6 md:pb-14 md:pt-12"
         data-nav-theme="light"
       >
-        <div className="relative mx-auto max-w-7xl px-6 text-center md:px-10">
+        <div className="relative mx-auto max-w-7xl px-4 text-center md:px-10">
           <RevealOnScroll>
             <span
               aria-hidden="true"
-              className="mx-auto flex h-8 w-8 items-center justify-center"
+              className="mx-auto flex h-6 w-6 items-center justify-center md:h-8 md:w-8"
             >
               {/* <span className="h-3 w-3 rotate-45 rounded-[3px] bg-wytes-orange" /> */}
             </span>
             <span className="block font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-ink">
               Services
             </span>
-            <h2 className="mt-20 font-display text-3xl uppercase leading-tight text-wytes-ink sm:text-5xl md:text-6xl">
+            <h2 className="mt-12 font-display text-2xl uppercase leading-tight text-wytes-ink sm:text-5xl md:mt-20 md:text-6xl">
               We Turn Strategy Into
             </h2>
-            <p className="mt-5 font-display text-3xl uppercase leading-tight text-wytes-ink/45 sm:text-5xl md:text-6xl">
+            <p className="mt-3 font-display text-2xl uppercase leading-tight text-wytes-ink/45 sm:text-5xl md:mt-5 md:text-6xl">
               Brands. Experiences. Influence.
             </p>
           </RevealOnScroll>
 
           <RevealOnScroll
             delay={0.1}
-            className="mx-auto mt-3 flex max-w-6xl flex-col gap-4 text-left font-body text-sm text-wytes-ink/50 sm:flex-row sm:justify-between sm:gap-10"
+            className="mx-auto mt-3 flex max-w-6xl flex-col gap-3 text-left font-body text-xs text-wytes-ink/50 sm:flex-row sm:justify-between sm:gap-10 sm:text-sm"
           >
             <p className="sm:max-w-68 sm:text-center">
               From the first thought to the final execution, we combine strategy, design, and
@@ -57,14 +57,14 @@ export function Services() {
             </p>
           </RevealOnScroll>
 
-          <RevealOnScroll delay={0.2} className="mt-24 flex justify-center">
+          <RevealOnScroll delay={0.2} className="mt-14 flex justify-center md:mt-24">
             <a
               href={`#${SERVICES_CARDS_ID}`}
               onClick={handleExploreClick}
-              className="group flex flex-col items-center gap-3 font-body text-xs font-semibold uppercase tracking-[0.25em] text-wytes-ink/70"
+              className="group flex flex-col items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.25em] text-wytes-ink/70 md:gap-3"
             >
               Explore Our Services
-              <span className="flex h-10 w-10 animate-bounce items-center justify-center rounded-full border border-wytes-ink/30">
+              <span className="flex h-8 w-8 animate-bounce items-center justify-center rounded-full border border-wytes-ink/30 md:h-10 md:w-10">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"

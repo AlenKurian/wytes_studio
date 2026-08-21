@@ -50,12 +50,12 @@ export function Marquee() {
     : Array.from({ length: REPEAT_COUNT * 2 }, (_, i) => i);
 
   return (
-    <div ref={wrapperRef} className="overflow-hidden border-y border-wytes-ink/10 py-4">
+    <div ref={wrapperRef} className="overflow-hidden border-y border-wytes-ink/10 py-3 md:py-4">
       <div ref={trackRef} className="flex w-max items-center whitespace-nowrap">
         {items.map((i) => (
           <span
             key={i}
-            className="mx-4 flex items-center gap-4 font-display text-sm tracking-[0.2em] text-wytes-ink/70 sm:text-base"
+            className="mx-3 flex items-center gap-3 font-display text-xs tracking-[0.2em] text-wytes-ink/70 sm:text-base md:mx-4 md:gap-4"
           >
             {PHRASE}
             <span aria-hidden="true" className="text-wytes-red">

@@ -5,16 +5,16 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
 export function Philosophy() {
   return (
-    <section className="bg-wytes-cream py-24 md:py-32" data-nav-theme="light">
-      <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="grid gap-10 md:grid-cols-[2fr_1fr] md:gap-16">
+    <section className="bg-wytes-cream py-16 md:py-32" data-nav-theme="light">
+      <div className="mx-auto max-w-6xl px-4 md:px-10">
+        <div className="grid gap-6 md:grid-cols-[2fr_1fr] md:gap-16">
           <RevealOnScroll className="md:-ml-6">
-            <h2 className="font-display text-3xl uppercase leading-[1.05] text-wytes-ink sm:text-5xl md:text-4xl">
+            <h2 className="font-display text-2xl uppercase leading-[1.05] text-wytes-ink sm:text-5xl md:text-4xl">
               We Don&apos;t Just Make Things Look Good.
               <br />
               <span className="font-display-light">We Make Them Mean Something.</span>
             </h2>
-            <p className="mt-6 font-body text-base text-wytes-ink/60 sm:text-md">
+            <p className="mt-4 font-body text-sm text-wytes-ink/60 sm:text-md md:mt-6">
               Every brand has a position to own, a story to tell and an audience to influence. We
               use design as a tool to make that position clear, distinctive and impossible to
               ignore.
@@ -25,7 +25,7 @@ export function Philosophy() {
             <span className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-ink/60">
               Our Philosophy
             </span>
-            <div className="relative mt-6 aspect-[2/3] w-full max-w-40 overflow-hidden rounded-xl">
+            <div className="relative mt-4 aspect-[2/3] w-full max-w-40 overflow-hidden rounded-xl md:mt-6">
               <Image
                 src="/images/about/image2.jpg"
                 alt="A figure standing in a glowing red tunnel"

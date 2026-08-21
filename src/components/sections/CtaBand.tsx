@@ -20,27 +20,27 @@ export function CtaBand() {
   return (
     <section
       id={SECTION_IDS.cta}
-      className="overflow-hidden px-6 py-4 md:px-10"
+      className="overflow-hidden px-4 py-3 md:px-10 md:py-4"
       data-nav-theme="dark"
     >
-      <div className="rounded-2xl bg-gradient-to-br from-[#ff5b00] via-[#ff8a1e] to-[#ffbf5e] py-24 md:py-32">
-        <div className="mx-auto max-w-3xl px-6 text-center md:px-10">
+      <div className="rounded-2xl bg-gradient-to-br from-[#ff5b00] via-[#ff8a1e] to-[#ffbf5e] py-16 md:py-32">
+        <div className="mx-auto max-w-3xl px-4 text-center md:px-10">
           <RevealOnScroll>
             <h2
-              className="font-display text-3xl uppercase leading-tight text-wytes-cream sm:text-5xl md:text-6xl"
+              className="font-display text-2xl uppercase leading-tight text-wytes-cream sm:text-5xl md:text-6xl"
               data-nav-theme="light"
             >
               Ready To Think
               <br />
               Differently?
             </h2>
-            <p className="mx-auto mt-6 max-w-xl font-body text-base text-wytes-cream/85 sm:text-lg">
+            <p className="mx-auto mt-4 max-w-xl font-body text-sm text-wytes-cream/85 sm:text-lg md:mt-6">
               Wytes Studio partners with a select number of ambitious businesses to build brands
               defined by clarity, distinction, authority and enduring value.
             </p>
           </RevealOnScroll>
 
-          <RevealOnScroll delay={0.15} className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <RevealOnScroll delay={0.15} className="mt-6 flex flex-wrap items-center justify-center gap-3 md:mt-10 md:gap-4">
             <PillButton
               href={`mailto:${STUDIO_EMAIL}`}
               variant="filled"

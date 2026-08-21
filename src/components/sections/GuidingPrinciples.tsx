@@ -69,7 +69,7 @@ export function GuidingPrinciples() {
 
   return (
     <section
-      className="overflow-hidden bg-gradient-to-br from-[#ffbd59] to-[#ff751f] py-20 md:py-28"
+      className="overflow-hidden bg-gradient-to-br from-[#ffbd59] to-[#ff751f] py-14 md:py-28"
       data-nav-theme="light"
     >
       {/* <div className="mx-auto max-w-5xl px-6 text-center md:px-10">
@@ -87,7 +87,7 @@ export function GuidingPrinciples() {
               {PRINCIPLES.map((principle) => (
                 <span
                   key={principle}
-                  className="mx-4 flex items-center gap-4 font-display text-2xl uppercase leading-none text-wytes-ink sm:text-4xl md:text-3xl"
+                  className="mx-3 flex items-center gap-3 font-display text-xl uppercase leading-none text-wytes-ink sm:text-4xl md:text-3xl"
                 >
                   {principle}
                   <span aria-hidden="true" className="text-wytes-orange">

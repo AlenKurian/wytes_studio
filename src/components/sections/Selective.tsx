@@ -19,7 +19,7 @@ export function Selective() {
   return (
     <section
       id={SELECTIVE_ID}
-      className="overflow-hidden px-6 py-4 md:px-10"
+      className="overflow-hidden px-4 py-3 md:px-10 md:py-4"
       data-nav-theme="dark"
     >
       {/* ---------------------------------------------
@@ -27,21 +27,21 @@ export function Selective() {
       --------------------------------------------- */}
 
       <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-[#ffbd59] to-[#ff571f]">
-        <div className="mx-auto max-w-4xl px-6 py-32 text-center md:px-10 md:py-44">
+        <div className="mx-auto max-w-4xl px-4 py-20 text-center md:px-10 md:py-44">
           <RevealOnScroll>
             <span className="-mt-4 block font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-cream/80">
               Partnership Alignment
             </span>
-            <h2 className="mx-auto mt-20 max-w-3xl font-display text-4xl uppercase leading-[0.95] text-wytes-cream sm:text-6xl md:text-7xl">
+            <h2 className="mx-auto mt-12 max-w-3xl font-display text-3xl uppercase leading-[0.95] text-wytes-cream sm:text-6xl md:mt-20 md:text-7xl">
               Selective By Design
             </h2>
-            <p className="mx-auto mt-3 max-w-3xl font-display text-2xl uppercase leading-tight text-wytes-cream/75 sm:text-3xl md:text-4xl">
+            <p className="mx-auto mt-4 max-w-3xl font-display text-xl uppercase leading-tight text-wytes-cream/75 sm:text-3xl md:mt-6 md:text-4xl">
               We Work With The Ambitious
             </p>
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.15}>
-            <p className="mx-auto mt-8 max-w-xl font-body text-base text-wytes-cream/75 sm:text-lg">
+            <p className="mx-auto mt-5 max-w-xl font-body text-sm text-wytes-cream/75 sm:text-lg md:mt-8">
               We partner with businesses and leaders who are building something ambitious, entering
               a defining stage of growth, repositioning their market, or looking to create lasting
               distinction.
@@ -53,7 +53,7 @@ export function Selective() {
             02 — INTERACTIVE ALIGNMENT LIST
         --------------------------------------------- */}
 
-        <div className="border-t border-wytes-ink/10 bg-wytes-cream px-6 py-20 md:px-10 md:py-28">
+        <div className="border-t border-wytes-ink/10 bg-wytes-cream px-4 py-12 md:px-10 md:py-28">
           <div className="mx-auto max-w-5xl">
             <RevealOnScroll>
               <span className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-ink/50">
@@ -61,7 +61,7 @@ export function Selective() {
               </span>
             </RevealOnScroll>
 
-            <div className="group/list mt-10 border-t border-wytes-ink/10">
+            <div className="group/list mt-6 border-t border-wytes-ink/10 md:mt-10">
               {ALIGNMENTS.map((statement, index) => (
                 <RevealOnScroll key={statement} delay={index * 0.04} start="top 92%">
                   <div
@@ -71,22 +71,23 @@ export function Selective() {
                       flex
                       items-center
                       justify-between
-                      gap-6
+                      gap-4
                       border-b
                       border-wytes-ink/10
-                      py-6
+                      py-4
                       transition-opacity
                       duration-300
                       ease-out
                       group-has-[:hover]/list:opacity-45
                       hover:!opacity-100
+                      md:gap-6
                       md:py-8
                     "
                   >
                     <span
                       className="
                         font-display
-                        text-2xl
+                        text-lg
                         uppercase
                         leading-none
                         text-wytes-ink
@@ -107,7 +108,7 @@ export function Selective() {
                       className="
                         shrink-0
                         -translate-x-3
-                        text-2xl
+                        text-lg
                         text-wytes-orange
                         opacity-0
                         transition-all

@@ -54,13 +54,13 @@ export function Footer() {
   return (
     <footer
       id={SECTION_IDS.footer}
-      className="bg-white pt-16"
+      className="bg-white pt-10 md:pt-16"
       data-nav-theme="light"
     >
-      <div className="grid grid-cols-2 gap-10 pb-16 pl-10 pr-6 pt-14 sm:pl-16 sm:pr-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_1fr_0.8fr] md:gap-8 md:pl-28 md:pr-16 md:pt-16">
+      <div className="grid grid-cols-2 gap-6 pb-10 pl-6 pr-4 pt-8 sm:pl-16 sm:pr-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_1fr_0.8fr] md:gap-8 md:pl-28 md:pr-16 md:pb-16 md:pt-16">
         <div className="col-span-2 md:col-span-1">
-          <span className="font-logo text-3xl italic text-wytes-ink">WYTES</span>
-          <p className="mt-4 max-w-xs font-body text-sm leading-relaxed text-wytes-ink/60">
+          <span className="font-logo text-2xl italic text-wytes-ink sm:text-3xl">WYTES</span>
+          <p className="mt-3 max-w-xs font-body text-xs leading-relaxed text-wytes-ink/60 md:mt-4 md:text-sm">
             Wytes Studio is a full-service brand and design agency specializing in clarity,
             distinction and enduring value.
           </p>
@@ -68,15 +68,15 @@ export function Footer() {
 
         {FOOTER_COLUMNS.map((column) => (
           <div key={column.title}>
-            <p className="font-body text-sm font-semibold text-wytes-ink">{column.title}</p>
-            <ul className="mt-5 space-y-3">
+            <p className="font-body text-xs font-semibold text-wytes-ink md:text-sm">{column.title}</p>
+            <ul className="mt-3 space-y-2 md:mt-5 md:space-y-3">
               {column.links.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="font-body text-sm text-wytes-ink/60 transition-colors duration-300 hover:text-wytes-ink"
+                    className="font-body text-xs text-wytes-ink/60 transition-colors duration-300 hover:text-wytes-ink md:text-sm"
                   >
                     {link.label}
                   </Link>
@@ -87,7 +87,7 @@ export function Footer() {
         ))}
       </div>
 
-      <div className="flex flex-col gap-2 border-t border-wytes-ink/10 px-6 py-6 font-body text-xs text-wytes-ink/45 sm:flex-row sm:items-center sm:justify-between sm:px-10 md:px-16">
+      <div className="flex flex-col gap-2 border-t border-wytes-ink/10 px-4 py-4 font-body text-xs text-wytes-ink/45 sm:flex-row sm:items-center sm:justify-between sm:px-10 md:px-16 md:py-6">
         <p>©{year} Wytes Studio. All rights reserved.</p>
         <p>Designed &amp; built by Wytes Studio</p>
       </div>

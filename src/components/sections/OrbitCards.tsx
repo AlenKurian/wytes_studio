@@ -109,10 +109,10 @@ export function OrbitCards({ sectionId }: { sectionId: string }) {
                   ref={(el) => {
                     cardRefs.current[index] = el;
                   }}
-                  className="absolute left-0 top-20 flex h-[4.75rem] w-[7rem] -translate-x-1/2 -translate-y-1/2 items-end overflow-hidden rounded-lg border border-white/30 bg-gradient-to-br from-wytes-cream/90 via-wytes-orange/40 to-wytes-cream/60 p-3 shadow-[0_14px_30px_rgba(11,11,11,0.32)] [backface-visibility:hidden] sm:h-[6rem] sm:w-[9rem] lg:h-[15.75rem] lg:w-[13.25rem]"
+                  className="absolute left-0 top-20 flex h-[4.75rem] w-[7rem] -translate-x-1/2 -translate-y-1/2 items-end overflow-hidden rounded-lg border border-white/30 bg-gradient-to-br from-wytes-cream/90 via-wytes-orange/40 to-wytes-cream/60 p-2 shadow-[0_14px_30px_rgba(11,11,11,0.32)] [backface-visibility:hidden] sm:h-[6rem] sm:w-[9rem] sm:p-3 lg:h-[15.75rem] lg:w-[13.25rem]"
                   data-nav-theme="light"
                 >
-                  <span className="rounded-full bg-wytes-cream/85 px-2.5 py-1 font-body text-[0.65rem] font-semibold uppercase tracking-wide text-wytes-ink sm:text-xs">
+                  <span className="rounded-full bg-wytes-cream/85 px-2 py-0.5 font-body text-[0.6rem] font-semibold uppercase tracking-wide text-wytes-ink sm:px-2.5 sm:py-1 sm:text-xs">
                     {service.title}
                   </span>
                 </div>

@@ -108,7 +108,7 @@ function ServiceCardsMobile() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="mt-16 flex flex-col gap-3 px-6 md:hidden">
+    <div className="mt-10 flex flex-col gap-2 px-4 md:hidden">
       {CARDS.map((card, index) => {
         const isOpen = openIndex === index;
         return (
@@ -121,18 +121,18 @@ function ServiceCardsMobile() {
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between gap-4 p-6 text-left"
+              className="flex w-full items-center justify-between gap-3 p-4 text-left"
             >
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 <span className={card.text}>{card.icon}</span>
-                <span className={`font-display text-2xl uppercase leading-none sm:text-3xl ${card.text}`}>
+                <span className={`font-display text-xl uppercase leading-none sm:text-3xl ${card.text}`}>
                   {card.title}
                 </span>
-                <p className={`font-body text-sm ${card.subtext}`}>{card.shortTagline}</p>
+                <p className={`font-body text-xs ${card.subtext}`}>{card.shortTagline}</p>
               </div>
               <span
                 aria-hidden="true"
-                className={`shrink-0 text-2xl transition-transform duration-300 ${card.text} ${isOpen ? "rotate-45" : ""}`}
+                className={`shrink-0 text-xl transition-transform duration-300 ${card.text} ${isOpen ? "rotate-45" : ""}`}
               >
                 +
               </span>
@@ -144,12 +144,12 @@ function ServiceCardsMobile() {
               }`}
             >
               <div className="overflow-hidden">
-                <div className="flex flex-col px-6 pb-6">
-                  <p className={`flex items-center gap-2 font-body text-sm ${card.subtext}`}>
+                <div className="flex flex-col px-4 pb-4">
+                  <p className={`flex items-center gap-2 font-body text-xs ${card.subtext}`}>
                     {card.tagline}
                     <span aria-hidden="true">→</span>
                   </p>
-                  <ul className={`mt-6 flex flex-col gap-2 border-t pt-4 ${card.text === "text-wytes-cream" ? "border-wytes-cream/20" : "border-wytes-ink/15"}`}>
+                  <ul className={`mt-4 flex flex-col gap-2 border-t pt-3 ${card.text === "text-wytes-cream" ? "border-wytes-cream/20" : "border-wytes-ink/15"}`}>
                     {card.services.map((service) => (
                       <li
                         key={service}

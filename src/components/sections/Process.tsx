@@ -282,16 +282,16 @@ export function Process() {
     return (
       <section
         id={PROCESS_ID}
-        className="bg-wytes-cream py-24 md:py-32"
+        className="bg-wytes-cream py-14 md:py-32"
         data-nav-theme="light"
       >
-        <div className="mx-auto max-w-6xl px-6 md:px-10">
+        <div className="mx-auto max-w-6xl px-4 md:px-10">
           <div className="max-w-4xl">
             <span className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-ink/50">
               Process
             </span>
 
-            <h2 className="mt-4 font-display text-4xl uppercase leading-[0.95] text-wytes-ink sm:text-6xl md:text-7xl">
+            <h2 className="mt-3 font-display text-3xl uppercase leading-[0.95] text-wytes-ink sm:text-6xl md:mt-4 md:text-7xl">
               We Don&apos;t Jump To The{" "}
               <span className="font-display-light">
                 Solution.
@@ -299,22 +299,22 @@ export function Process() {
             </h2>
           </div>
 
-          <div className="mt-20">
+          <div className="mt-12 md:mt-20">
             {STEPS.map((step) => (
               <div
                 key={step.number}
-                className="border-t border-wytes-ink/10 py-10"
+                className="border-t border-wytes-ink/10 py-6 md:py-10"
               >
-                <div className="grid gap-6 md:grid-cols-[180px_1fr_1fr]">
+                <div className="grid gap-3 md:grid-cols-[180px_1fr_1fr] md:gap-6">
                   <span className="font-mono text-sm text-wytes-orange">
                     {step.number}
                   </span>
 
-                  <h3 className="font-display text-4xl uppercase leading-none text-wytes-ink">
+                  <h3 className="font-display text-2xl uppercase leading-none text-wytes-ink md:text-4xl">
                     {step.title}
                   </h3>
 
-                  <p className="max-w-md font-body text-sm leading-relaxed text-wytes-ink/60 md:text-base">
+                  <p className="max-w-md font-body text-xs leading-relaxed text-wytes-ink/60 md:text-base">
                     {step.description}
                   </p>
                 </div>
@@ -343,21 +343,21 @@ export function Process() {
           INTRO
       --------------------------------------------- */}
 
-      <div className="mx-auto max-w-6xl px-6 pb-2 pt-16 text-center md:px-10 md:pb-4 md:pt-20">
+      <div className="mx-auto max-w-6xl px-4 pb-2 pt-10 text-center md:px-10 md:pb-4 md:pt-20">
         <RevealOnScroll>
           <div className="mx-auto max-w-5xl">
             <span className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-ink/50">
               Process
             </span>
 
-            <h2 className="mx-auto mt-5 max-w-4xl font-display text-4xl uppercase leading-[0.9] text-wytes-ink sm:text-6xl md:text-6xl">
+            <h2 className="mx-auto mt-3 max-w-4xl font-display text-3xl uppercase leading-[0.9] text-wytes-ink sm:text-6xl md:mt-5 md:text-6xl">
               We Don&apos;t Jump To The{" "}
               <span className="font-display-light">
                 Solution.
               </span>
             </h2>
 
-            <p className="mx-auto mt-5 max-w-xl font-body text-sm leading-relaxed text-wytes-ink/50 md:text-base">
+            <p className="mx-auto mt-3 max-w-xl font-body text-xs leading-relaxed text-wytes-ink/50 md:mt-5 md:text-base">
               We start with the business, understand the challenge,
               establish the strategy and create from there.
             </p>
@@ -378,8 +378,8 @@ export function Process() {
           items-start
           overflow-hidden
           bg-wytes-cream
-          px-6
-          pt-4
+          px-4
+          pt-3
           md:px-10
           md:pt-6
         "
@@ -458,7 +458,7 @@ export function Process() {
                       mt-5
                       max-w-lg
                       font-body
-                      text-sm
+                      text-xs
                       leading-relaxed
                       text-wytes-ink/55
                       sm:text-base
@@ -478,7 +478,7 @@ export function Process() {
             BOTTOM PROGRESS
         ------------------------------------------- */}
 
-        <div className="absolute bottom-4 left-6 right-6 md:bottom-6 md:left-10 md:right-10">
+        <div className="absolute bottom-3 left-4 right-4 md:bottom-6 md:left-10 md:right-10">
           <div className="mx-auto flex max-w-7xl items-center gap-5">
             <span
               ref={currentNumberRef}
