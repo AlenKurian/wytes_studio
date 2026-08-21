@@ -1,44 +1,97 @@
 "use client";
 
-import { useState, type MouseEvent } from "react";
+import { useState, type MouseEvent, type ReactNode } from "react";
 
 type ServiceCard = {
   title: string;
+  shortTagline: string;
   tagline: string;
   services: string[];
   bg: string;
+  text: string;
+  subtext: string;
+  icon: ReactNode;
 };
+
+const ICON_STROKE = 1.5;
 
 const CARDS: ServiceCard[] = [
   {
     title: "Strategy",
+    shortTagline: "Clarity that sets the foundation.",
     tagline: "The thinking behind the brand",
     services: ["Brand Strategy", "Positioning", "Market and Competitive Intelligence", "Brand Architecture", "Naming & Messaging", "Brand Voice", "Go-to-Market Strategy"],
     bg: "bg-wytes-ink",
+    text: "text-wytes-cream",
+    subtext: "text-wytes-cream/60",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={ICON_STROKE} className="h-8 w-8">
+        <circle cx="12" cy="5.5" r="2.25" />
+        <path d="M9.5 12c.3-1.6 1.1-2.5 2.5-2.5s2.2.9 2.5 2.5c.2 1.1 1 2 1.9 2.6.6.4.9 1 .9 1.7 0 1-.8 1.7-1.8 1.7H8.5c-1 0-1.8-.7-1.8-1.7 0-.7.3-1.3.9-1.7.9-.6 1.7-1.5 1.9-2.6Z" />
+        <path d="M8 20.5h8" />
+        <path d="M9 18.5h6" />
+      </svg>
+    ),
   },
   {
     title: "Brand",
+    shortTagline: "Identities that stand out and stand for something.",
     tagline: "Strategy made visible",
     services: ["Visual Identity", "Logo Systems", "Corporate Identity", "Art Direction", "Typography", "Color Systems", "Brand Guidelines", "Packaging", "Collateral"],
-    bg: "bg-gradient-to-br from-[#ffbb46] to-[#ff3600]",
+    bg: "bg-[#e2e2df]",
+    text: "text-wytes-ink",
+    subtext: "text-wytes-ink/60",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={ICON_STROKE} className="h-8 w-8">
+        <circle cx="12" cy="12" r="7" />
+      </svg>
+    ),
   },
   {
     title: "Digital",
+    shortTagline: "Digital experiences designed to perform.",
     tagline: "Strategy transformed into experience",
     services: ["Digital Strategy", "Website Strategy", "UI / UX Design", "Website Development", "Corporate Websites", "Landing Pages", "E-Commerce", "Digital Systems"],
-    bg: "bg-wytes-orange",
+    bg: "bg-wytes-cream",
+    text: "text-wytes-ink",
+    subtext: "text-wytes-ink/60",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={ICON_STROKE} className="h-8 w-8">
+        <rect x="3" y="4.5" width="18" height="12" rx="1.5" />
+        <path d="M9 20.5h6" />
+        <path d="M12 16.5v4" />
+      </svg>
+    ),
   },
   {
     title: "Creative",
+    shortTagline: "Crafting content that connects and inspires.",
     tagline: "Strategy transformed into culture",
     services: ["Creative Design", "Campaign Concepts", "Photography and Videography", "Brand Films", "Motion Design", "Editorial & Social Content"],
-    bg: "bg-gradient-to-br from-[#c6280e] to-[#0b0b0b]",
+    bg: "bg-wytes-ink",
+    text: "text-wytes-cream",
+    subtext: "text-wytes-cream/60",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={ICON_STROKE} className="h-8 w-8">
+        <path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3M6.3 6.3l2.1 2.1M15.6 15.6l2.1 2.1M17.7 6.3l-2.1 2.1M8.4 15.6l-2.1 2.1" />
+      </svg>
+    ),
   },
   {
     title: "Media",
+    shortTagline: "Amplifying brands with impact and precision.",
     tagline: "Strategy transformed into visibility",
     services: ["Media Strategy", "Digital Advertising", "Outdoor Advertising", "Billboards & LED Displays", "Digital Signage", "Media Planning"],
-    bg: "bg-wytes-red",
+    bg: "bg-gradient-to-br from-wytes-orange to-wytes-red",
+    text: "text-wytes-cream",
+    subtext: "text-wytes-cream/75",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={ICON_STROKE} className="h-8 w-8">
+        <path d="M5 20.5V13" />
+        <path d="M12 20.5V8" />
+        <path d="M19 20.5v-7" />
+      </svg>
+    ),
   },
 ];
 
@@ -70,12 +123,16 @@ function ServiceCardsMobile() {
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between gap-4 p-6 text-left"
             >
-              <span className="font-display text-2xl uppercase leading-none text-wytes-cream sm:text-3xl">
-                {card.title}
-              </span>
+              <div className="flex flex-col gap-3">
+                <span className={card.text}>{card.icon}</span>
+                <span className={`font-display text-2xl uppercase leading-none sm:text-3xl ${card.text}`}>
+                  {card.title}
+                </span>
+                <p className={`font-body text-sm ${card.subtext}`}>{card.shortTagline}</p>
+              </div>
               <span
                 aria-hidden="true"
-                className={`shrink-0 text-2xl text-wytes-cream transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+                className={`shrink-0 text-2xl transition-transform duration-300 ${card.text} ${isOpen ? "rotate-45" : ""}`}
               >
                 +
               </span>
@@ -88,15 +145,15 @@ function ServiceCardsMobile() {
             >
               <div className="overflow-hidden">
                 <div className="flex flex-col px-6 pb-6">
-                  <p className="flex items-center gap-2 font-body text-sm text-wytes-cream/75">
+                  <p className={`flex items-center gap-2 font-body text-sm ${card.subtext}`}>
                     {card.tagline}
                     <span aria-hidden="true">→</span>
                   </p>
-                  <ul className="mt-6 flex flex-col gap-2 border-t border-wytes-cream/20 pt-4">
+                  <ul className={`mt-6 flex flex-col gap-2 border-t pt-4 ${card.text === "text-wytes-cream" ? "border-wytes-cream/20" : "border-wytes-ink/15"}`}>
                     {card.services.map((service) => (
                       <li
                         key={service}
-                        className="font-body text-xs uppercase tracking-wide text-wytes-cream/60 sm:text-sm"
+                        className={`font-body text-xs uppercase tracking-wide sm:text-sm ${card.subtext}`}
                       >
                         {service}
                       </li>
@@ -143,16 +200,15 @@ function ServiceCardsDesktop() {
             }}
           >
             <div
-              className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${
+              className={`absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center transition-opacity duration-500 md:p-8 ${
                 isActive ? "pointer-events-none opacity-0" : "opacity-100"
               }`}
             >
-              <span
-                className="whitespace-nowrap font-display text-2xl uppercase tracking-wide text-wytes-cream sm:text-3xl"
-                style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-              >
+              <span className={card.text}>{card.icon}</span>
+              <span className={`font-display text-2xl uppercase leading-none sm:text-3xl ${card.text}`}>
                 {card.title}
               </span>
+              <p className={`font-body text-sm ${card.subtext}`}>{card.shortTagline}</p>
             </div>
 
             <div
@@ -162,18 +218,18 @@ function ServiceCardsDesktop() {
                   : "pointer-events-none translate-y-4 opacity-0"
               }`}
             >
-              <span className="font-display text-3xl uppercase leading-none text-wytes-cream sm:text-4xl md:text-5xl">
+              <span className={`font-display text-3xl uppercase leading-none sm:text-4xl md:text-5xl ${card.text}`}>
                 {card.title}
               </span>
-              <p className="mt-3 flex max-w-xs items-center gap-2 font-body text-sm text-wytes-cream/75 sm:text-base">
+              <p className={`mt-3 flex max-w-xs items-center gap-2 font-body text-sm sm:text-base ${card.subtext}`}>
                 {card.tagline}
                 <span aria-hidden="true">→</span>
               </p>
-              <ul className="mt-6 flex flex-col gap-2 border-t border-wytes-cream/20 pt-4">
+              <ul className={`mt-6 flex flex-col gap-2 border-t pt-4 ${card.text === "text-wytes-cream" ? "border-wytes-cream/20" : "border-wytes-ink/15"}`}>
                 {card.services.map((service) => (
                   <li
                     key={service}
-                    className="font-body text-xs uppercase tracking-wide text-wytes-cream/60 sm:text-sm"
+                    className={`font-body text-xs uppercase tracking-wide sm:text-sm ${card.subtext}`}
                   >
                     {service}
                   </li>

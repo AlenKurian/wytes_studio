@@ -20,7 +20,7 @@ export function CtaBand() {
   return (
     <section
       id={SECTION_IDS.cta}
-      className="bg-gradient-to-br from-[#ffbb46] to-[#ff3600] py-24 md:py-32"
+      className="bg-gradient-to-br from-[#ff5b00] via-[#ff8a1e] to-[#ffbf5e] py-24 md:py-32"
       data-nav-theme="dark"
     >
       <div className="mx-auto max-w-3xl px-6 text-center md:px-10">

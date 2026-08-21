@@ -18,9 +18,10 @@ export function About() {
             data-nav-theme="dark"
           >
             We Build More Than Brands
-            <br />
-            We Build Belief
           </h2>
+          <p className="mt-5 font-display text-3xl uppercase leading-tight text-wytes-ink/45 sm:text-5xl md:text-6xl">
+            We Build Belief
+          </p>
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.1}>
