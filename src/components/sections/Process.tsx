@@ -343,7 +343,7 @@ export function Process() {
           INTRO
       --------------------------------------------- */}
 
-      <div className="mx-auto max-w-6xl px-4 pb-2 pt-10 text-center md:px-10 md:pb-4 md:pt-20">
+      <div className="mx-auto max-w-6xl px-4 pb-2 pt-28 text-center md:px-10 md:pb-4 md:pt-20">
         <RevealOnScroll>
           <div className="mx-auto max-w-5xl">
             <span className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-ink/50">
@@ -373,13 +373,16 @@ export function Process() {
         className="
           relative
           flex
-          h-[38svh]
-          min-h-[320px]
-          items-start
+          h-[48svh]
+          min-h-[380px]
+          items-center
           overflow-hidden
           bg-wytes-cream
           px-4
           pt-3
+          md:h-[38svh]
+          md:min-h-[320px]
+          md:items-start
           md:px-10
           md:pt-6
         "

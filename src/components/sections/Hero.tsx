@@ -59,13 +59,13 @@ export function Hero() {
           </h1>
 
           <p
-            className="mt-3 max-w-xl text-left font-body text-xs text-black sm:text-base md:mt-6 md:text-md"
+            className="mt-6 max-w-xl text-left font-body text-xs text-black sm:text-base md:mt-6 md:text-md"
             data-nav-theme="light"
           >
             Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy — not decoration.
           </p>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4 md:mt-8">
+          <div className="mt-8 flex flex-wrap items-center gap-4 md:mt-8">
             <PillButton
               href={`mailto:${STUDIO_EMAIL}`}
               variant="filled"
@@ -81,7 +81,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="light"
-          className="group mt-5 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:ml-auto md:w-fit md:flex-row md:translate-x-10 md:gap-3 md:text-xs md:text-white"
+          className="group mt-16 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:ml-auto md:w-fit md:flex-row md:translate-x-10 md:gap-3 md:text-xs md:text-white"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-wytes-orange/60 md:hidden" />
