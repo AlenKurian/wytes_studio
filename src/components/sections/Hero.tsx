@@ -35,7 +35,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 w-full px-4 pb-5 pt-24 md:px-35 md:pb-10 md:pt-40">
+      <div className="relative z-10 w-full px-4 pb-5 pt-32 md:px-35 md:pb-10 md:pt-40">
         <div ref={contentRef} className="max-w-4xl">
           <h1
             className="font-hero-serif uppercase leading-[0.95] text-black"

@@ -119,7 +119,7 @@ export function Navbar() {
               href={`mailto:${STUDIO_EMAIL}`}
               variant="outline"
               className={clsx(
-                "relative overflow-hidden backdrop-blur-sm transition-colors duration-300",
+                "relative overflow-hidden backdrop-blur-sm transition-colors duration-300 !px-4 !py-2 !text-xs md:!px-7 md:!py-3.5 md:!text-sm",
                 buttonLight
                   ? "border-black bg-white/40 text-black shadow-[0_0_16px_rgba(0,0,0,0.12)] hover:bg-white/60"
                   : "border-white bg-black/25 text-white shadow-[0_0_16px_rgba(0,0,0,0.35)] hover:bg-black/40"
