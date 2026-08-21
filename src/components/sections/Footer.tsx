@@ -17,7 +17,6 @@ const FOOTER_COLUMNS: { title: string; links: { label: string; href: string }[] 
     title: "Company",
     links: [
       { label: "Services", href: `#${SECTION_IDS.services}` },
-      { label: "Projects", href: `#${SECTION_IDS.projects}` },
       { label: "About Us", href: `#${SECTION_IDS.about}` },
     ],
   },

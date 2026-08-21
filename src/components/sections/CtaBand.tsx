@@ -14,7 +14,7 @@ export function CtaBand() {
   function handleWorksClick(event: MouseEvent<HTMLAnchorElement>) {
     if (!isHome || !lenis) return;
     event.preventDefault();
-    lenis.scrollTo(`#${SECTION_IDS.projects}`, { offset: -NAV_HEIGHT, duration: 1.4 });
+    lenis.scrollTo(`#${SECTION_IDS.about}`, { offset: -NAV_HEIGHT, duration: 1.4 });
   }
 
   return (
@@ -54,7 +54,7 @@ export function CtaBand() {
             </span>
           </PillButton>
           <PillButton
-            href={isHome ? `#${SECTION_IDS.projects}` : `/#${SECTION_IDS.projects}`}
+            href={isHome ? `#${SECTION_IDS.about}` : `/#${SECTION_IDS.about}`}
             onClick={handleWorksClick}
             variant="outline"
             className="group !border-wytes-cream !text-wytes-cream hover:!bg-white/10"

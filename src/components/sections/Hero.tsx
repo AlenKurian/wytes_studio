@@ -20,7 +20,7 @@ export function Hero() {
   function handleWorksClick(event: ReactMouseEvent<HTMLAnchorElement>) {
     if (!lenis) return;
     event.preventDefault();
-    lenis.scrollTo(`#${SECTION_IDS.projects}`, { offset: -NAV_HEIGHT, duration: 1.4 });
+    lenis.scrollTo(`#${SECTION_IDS.about}`, { offset: -NAV_HEIGHT, duration: 1.4 });
   }
 
   return (
@@ -82,7 +82,7 @@ export function Hero() {
             </PillButton>
 
             <PillButton
-              href={`#${SECTION_IDS.projects}`}
+              href={`#${SECTION_IDS.about}`}
               onClick={handleWorksClick}
               variant="outline"
               className="!border-wytes-cream !text-wytes-cream hover:!bg-white/10"

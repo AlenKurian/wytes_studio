@@ -3,7 +3,8 @@ import { About } from "@/components/sections/About";
 import { Selective } from "@/components/sections/Selective";
 import { Services } from "@/components/sections/Services";
 import { Process } from "@/components/sections/Process";
-import { Projects } from "@/components/sections/Projects";
+// Projects section is temporarily disabled — not ready to show yet, but kept for later use.
+// import { Projects } from "@/components/sections/Projects";
 import { GuidingPrinciples } from "@/components/sections/GuidingPrinciples";
 import { WytesStandard } from "@/components/sections/WytesStandard";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -17,7 +18,7 @@ export default function Home() {
       <Selective />
       <Services />
       <Process />
-      <Projects />
+      {/* <Projects /> */}
       <GuidingPrinciples />
       <WytesStandard />
       <CtaBand />

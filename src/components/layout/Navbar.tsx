@@ -81,7 +81,7 @@ export function Navbar() {
       <nav className="relative flex items-center justify-between px-6 py-6 md:px-10">
         <div
           ref={linksWrapRef}
-          className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-10 sm:flex"
+          className="absolute left-1/2 top-1/2 hidden translate-x-[-50%] translate-y-[-40%] items-center gap-25 sm:flex"
         >
           {NAV_LINKS.map((link) => {
             const isCurrent = pathname === link.href;
@@ -90,7 +90,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={clsx(
-                  "font-body text-xs font-semibold uppercase tracking-[0.25em] transition-colors duration-300",
+                  "font-body text-sm font-semibold uppercase tracking-[0.25em] transition-colors duration-300",
                   linksLight ? "text-black" : "text-white",
                   isCurrent ? "opacity-100" : "opacity-60 hover:opacity-100"
                 )}
