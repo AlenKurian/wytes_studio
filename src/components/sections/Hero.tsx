@@ -32,7 +32,7 @@ export function Hero() {
     >
       <div className="absolute inset-0">
         <Image
-          src="/images/hero4x_enhanced.png"
+          src="/images/hero_sharpened.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
@@ -68,7 +68,7 @@ export function Hero() {
             className="mt-6 max-w-xl text-left font-body text-base text-wytes-cream/100 sm:text-lg"
             data-nav-theme="light"
           >
-            We build brands, digital experiences and creative systems that help ambitious companies stand apart, move forward and lead.
+            Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy — not decoration.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">

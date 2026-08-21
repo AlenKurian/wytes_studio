@@ -24,6 +24,13 @@ const FOOTER_COLUMNS: {
     ],
   },
   {
+    title: "Email",
+    links: [
+      { label: "hello@wytes.com", href: "mailto:hello@wytes.com" },
+      { label: "connect@wytes.com", href: "mailto:connect@wytes.com" },
+    ],
+  },
+  {
     title: "Social",
     links: [
       {
@@ -50,7 +57,7 @@ export function Footer() {
       className="bg-white pt-16"
       data-nav-theme="light"
     >
-      <div className="grid grid-cols-2 gap-10 pb-16 pl-10 pr-6 pt-14 sm:pl-16 sm:pr-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-8 md:pl-28 md:pr-16 md:pt-16">
+      <div className="grid grid-cols-2 gap-10 pb-16 pl-10 pr-6 pt-14 sm:pl-16 sm:pr-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_1fr_0.8fr] md:gap-8 md:pl-28 md:pr-16 md:pt-16">
         <div className="col-span-2 md:col-span-1">
           <span className="font-logo text-3xl italic text-wytes-ink">WYTES</span>
           <p className="mt-4 max-w-xs font-body text-sm leading-relaxed text-wytes-ink/60">
