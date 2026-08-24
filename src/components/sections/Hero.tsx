@@ -24,24 +24,35 @@ export function Hero() {
       className="relative flex h-svh min-h-[640px] w-full items-start overflow-hidden bg-wytes-red-deep md:min-h-[820px] md:items-end"
       data-nav-theme="light"
     >
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 md:hidden">
+        <Image
+          src="/images/mob_hero.png"
+          alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+
+      <div className="absolute inset-0 hidden md:block">
         <Image
           src="/images/hero_2.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
           sizes="100vw"
-          className="scale-125 object-cover object-[100%_100%] md:scale-100 md:object-center"
+          className="object-cover object-center"
         />
       </div>
 
       <div className="relative z-10 w-full px-4 pb-5 pt-24 md:px-35 md:pb-10 md:pt-40">
         <div ref={contentRef} className="max-w-4xl">
           <span
-            className="mb-3 flex w-fit items-center gap-1.5 rounded-full border border-black/15 bg-white/60 px-3 py-1 font-body text-[10px] font-semibold uppercase tracking-[0.15em] text-black backdrop-blur-sm md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-xs"
+            className="mb-6 flex w-fit items-center gap-1 rounded-full border border-black/15 bg-white/60 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-black backdrop-blur-sm md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
             data-nav-theme="light"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-3 w-3 text-wytes-orange md:h-3.5 md:w-3.5">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="h-2.5 w-2.5 text-wytes-orange md:h-3.5 md:w-3.5">
               <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z" />
             </svg>
             The Complete Studio
