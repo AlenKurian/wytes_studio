@@ -26,8 +26,8 @@ const FOOTER_COLUMNS: {
   {
     title: "Email",
     links: [
-      { label: "hello@wytes.com", href: "mailto:hello@wytes.com" },
-      { label: "connect@wytes.com", href: "mailto:connect@wytes.com" },
+      { label: "hello@wytes.studio", href: "mailto:hello@wytes.studio" },
+      { label: "connect@wytes.studio", href: "mailto:connect@wytes.studio" },
     ],
   },
   {
