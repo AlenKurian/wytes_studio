@@ -31,14 +31,14 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[80%_100%] md:object-center"
+          className="object-cover object-[100%_100%] md:object-center"
         />
       </div>
 
-      <div className="relative z-10 w-full px-4 pb-5 pt-60 md:px-35 md:pb-10 md:pt-40">
+      <div className="relative z-10 w-full px-4 pb-5 pt-32 md:px-35 md:pb-10 md:pt-40">
         <div ref={contentRef} className="max-w-4xl">
           <span
-            className="mt-20 mb-8 flex w-fit items-center gap-2 rounded-full border border-black/15 bg-white/60 px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-black backdrop-blur-sm md:mt-0"
+            className="mb-4 flex w-fit items-center gap-2 rounded-full border border-black/15 bg-white/60 px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-black backdrop-blur-sm md:mb-8"
             data-nav-theme="light"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5 text-wytes-orange">
