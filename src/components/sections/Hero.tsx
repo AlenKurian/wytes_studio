@@ -68,22 +68,22 @@ export function Hero() {
             className="font-hero-general uppercase leading-[0.95] text-black"
             data-nav-theme="light"
           >
-            <span className="block text-3xl font-medium md:text-5xl md:whitespace-nowrap lg:text-6xl">
+            <span className="block text-4xl font-medium md:text-5xl md:whitespace-nowrap lg:text-6xl">
               Your <span className="font-semibold text-wytes-orange">Brand</span> is a
             </span>
-            <span className="mt-2 block text-3xl font-semibold md:hidden">
+            <span className="mt-2 block text-4xl font-semibold md:hidden">
               Business
             </span>
             <span className="mt-2 hidden text-3xl font-semibold sm:text-4xl md:block md:text-5xl md:whitespace-nowrap lg:text-6xl">
               Bussiness <span className="text-wytes-orange">Decision</span>
             </span>
-            <span className="mt-2 block text-3xl font-semibold text-wytes-orange md:hidden">
+            <span className="mt-2 block text-4xl font-semibold text-wytes-orange md:hidden">
               Decision
             </span>
           </h1>
 
           <p
-            className="mt-6 max-w-[15rem] text-center font-body text-xs text-black sm:text-base md:mt-6 md:max-w-xl md:text-md"
+            className="mt-6 max-w-[19rem] text-center font-body text-sm text-black sm:text-base md:mt-6 md:max-w-xl md:text-md"
             data-nav-theme="light"
           >
             Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy — not decoration.
