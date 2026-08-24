@@ -52,7 +52,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 flex w-full flex-col items-center px-10 pt-24 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
+      <div className="relative z-10 flex w-full flex-col items-center px-6 pt-24 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
         <div ref={contentRef} className="flex max-w-5xl flex-col items-center">
           <span
             className="mb-6 flex w-fit items-center gap-1 rounded-full border border-black/15 bg-white/60 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-black backdrop-blur-sm md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
@@ -68,28 +68,31 @@ export function Hero() {
             className="font-hero-general uppercase leading-[0.95] text-black"
             data-nav-theme="light"
           >
-            <span className="block whitespace-nowrap text-4xl font-medium md:text-5xl lg:text-6xl">
-              Your <span className="font-semibold text-wytes-orange">Brand</span> is a
+            <span className="block text-4xl font-semibold md:hidden">
+              <span className="text-wytes-orange">Your</span> Brand
             </span>
-            <span className="mt-2 block text-4xl font-semibold md:hidden">
-              Business
+            <span className="mt-1 block text-4xl font-semibold text-wytes-orange md:hidden">
+              is a Bussiness
+            </span>
+            <span className="mt-1 block text-4xl font-semibold md:hidden">
+              Decision
+            </span>
+            <span className="hidden text-3xl font-medium sm:text-4xl md:block md:text-5xl md:whitespace-nowrap lg:text-6xl">
+              Your <span className="font-semibold text-wytes-orange">Brand</span> is a
             </span>
             <span className="mt-2 hidden text-3xl font-semibold sm:text-4xl md:block md:text-5xl md:whitespace-nowrap lg:text-6xl">
               Bussiness <span className="text-wytes-orange">Decision</span>
             </span>
-            <span className="mt-2 block text-4xl font-semibold text-wytes-orange md:hidden">
-              Decision
-            </span>
           </h1>
 
           <p
-            className="mt-6 max-w-[17rem] text-center font-body text-xs text-black sm:text-base md:mt-6 md:max-w-xl md:text-md"
+            className="mt-5 max-w-[18rem] text-center font-body text-xs text-black sm:text-base md:mt-6 md:max-w-xl md:text-md"
             data-nav-theme="light"
           >
-            Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy — not decoration.
+            Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy – not decoration.
           </p>
 
-          <div className="mt-8 flex w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
+          <div className="mt-6 flex w-full flex-col-reverse items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
             <PillButton
               href={`#${SECTION_IDS.projects}`}
               onClick={handleWorksClick}
@@ -106,7 +109,7 @@ export function Hero() {
               className="!border-black !bg-white/40 !text-black !font-normal shadow-[0_0_16px_rgba(0,0,0,0.12)] backdrop-blur-sm hover:!bg-white/60 !px-5 !py-2.5 !text-[11px] md:!px-8 md:!py-3 md:!text-sm"
               data-nav-theme="light"
             >
-              View Our Works
+              Explore Our Works
             </PillButton>
           </div>
         </div>
@@ -115,7 +118,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="light"
-          className="group mt-36 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-60 md:w-fit md:flex-row md:gap-3 md:text-xs"
+          className="group mt-20 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-60 md:w-fit md:flex-row md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-wytes-orange/60 md:hidden" />
