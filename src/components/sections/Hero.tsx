@@ -32,7 +32,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 md:hidden">
         <Image
-          src="/images/mob_hero1.png"
+          src="/images/mob_hero2.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
@@ -43,7 +43,7 @@ export function Hero() {
 
       <div className="absolute inset-0 hidden md:block">
         <Image
-          src="/images/hero_4x.png"
+          src="/images/hero_2x.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
@@ -115,7 +115,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="light"
-          className="group mt-28 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-48 md:w-fit md:flex-row md:gap-3 md:text-xs"
+          className="group mt-36 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-60 md:w-fit md:flex-row md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-wytes-orange/60 md:hidden" />
