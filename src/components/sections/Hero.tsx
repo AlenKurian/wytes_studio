@@ -68,7 +68,7 @@ export function Hero() {
             className="font-hero-general uppercase leading-[0.95] text-black"
             data-nav-theme="light"
           >
-            <span className="block text-4xl font-medium md:text-5xl md:whitespace-nowrap lg:text-6xl">
+            <span className="block whitespace-nowrap text-4xl font-medium md:text-5xl lg:text-6xl">
               Your <span className="font-semibold text-wytes-orange">Brand</span> is a
             </span>
             <span className="mt-2 block text-4xl font-semibold md:hidden">
