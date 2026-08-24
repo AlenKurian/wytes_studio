@@ -26,32 +26,30 @@ export function Hero() {
     >
       <div className="absolute inset-0">
         <Image
-          src="/images/h_image.png"
+          src="/images/hero_2.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[75%_50%] md:object-center"
+          className="object-cover"
         />
       </div>
 
       <div className="relative z-10 w-full px-4 pb-5 pt-32 md:px-35 md:pb-10 md:pt-40">
         <div ref={contentRef} className="max-w-4xl">
           <h1
-            className="font-hero-serif uppercase leading-[0.95] text-black"
+            className="font-hero-jakarta uppercase leading-[0.95] text-black"
             data-nav-theme="light"
           >
-            <span className="block text-3xl text-wytes-orange sm:text-4xl md:text-5xl lg:text-5xl">
-              <span className="font-medium italic"></span>
-              <span className="font-bold not-italic">Your</span>
+            <span className="block text-3xl font-medium text-wytes-orange sm:text-4xl md:text-5xl lg:text-5xl">
+              Your
             </span>
             <span className="block text-5xl font-semibold sm:text-6xl md:text-7xl lg:text-8xl">
               BRAND
             </span>
             <br />
-            <span className="block text-3xl text-wytes-orange sm:text-4xl md:text-5xl lg:text-5xl">
-              <span className="font-medium non-italic">A </span>
-              <span className="font-bold not-italic">Bussiness</span>
+            <span className="block text-3xl font-medium text-wytes-orange sm:text-4xl md:text-5xl lg:text-5xl">
+              is a Bussiness
             </span>
             <span className="block text-5xl font-semibold sm:text-6xl md:text-7xl lg:text-8xl">
               decision
@@ -81,11 +79,11 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="light"
-          className="group mt-16 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:ml-auto md:w-fit md:flex-row md:translate-x-10 md:gap-3 md:text-xs md:text-white"
+          className="group mt-16 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:ml-auto md:w-fit md:flex-row md:translate-x-10 md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-wytes-orange/60 md:hidden" />
-            <span className="animate-bounce flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-black text-black md:h-11 md:w-11 md:border-white md:text-white">
+            <span className="animate-bounce flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-black text-black md:h-11 md:w-11">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-4 w-4 md:h-6 md:w-6">
                 <path d="M12 4v17m0 0-6-6m6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Archivo, Archivo_Black, Inter, Playfair_Display } from "next/font/google";
+import { Anton, Archivo, Archivo_Black, Inter, Playfair_Display, Plus_Jakarta_Sans, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/layout/SmoothScrollProvider";
 import { Navbar } from "@/components/layout/Navbar";
@@ -12,7 +12,7 @@ const archivoBlack = Archivo_Black({
 });
 
 const archivo = Archivo({
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   variable: "--font-archivo",
 });
@@ -35,6 +35,18 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
+const publicSans = Public_Sans({
+  weight: ["700", "800"],
+  subsets: ["latin"],
+  variable: "--font-public-sans",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  weight: ["500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta-sans",
+});
+
 export const metadata: Metadata = {
   title: "WYTES Studio — We Build Brands, We Build Digital",
   description:
@@ -45,7 +57,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${archivoBlack.variable} ${archivo.variable} ${inter.variable} ${anton.variable} ${playfair.variable} antialiased`}
+      className={`${archivoBlack.variable} ${archivo.variable} ${inter.variable} ${anton.variable} ${playfair.variable} ${publicSans.variable} ${plusJakartaSans.variable} antialiased`}
     >
       <body className="font-body">
         <SmoothScrollProvider>
