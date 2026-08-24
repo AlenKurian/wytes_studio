@@ -92,7 +92,7 @@ export function Hero() {
             Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy – not decoration.
           </p>
 
-          <div className="mt-6 flex w-full flex-col-reverse items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
+          <div className="mt-6 flex w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
             <PillButton
               href={`#${SECTION_IDS.projects}`}
               onClick={handleWorksClick}
@@ -109,7 +109,7 @@ export function Hero() {
               className="!border-black !bg-white/40 !text-black !font-normal shadow-[0_0_16px_rgba(0,0,0,0.12)] backdrop-blur-sm hover:!bg-white/60 !px-5 !py-2.5 !text-[11px] md:!px-8 md:!py-3 md:!text-sm"
               data-nav-theme="light"
             >
-              Explore Our Works
+              view Our Works
             </PillButton>
           </div>
         </div>
