@@ -59,6 +59,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${archivoBlack.variable} ${archivo.variable} ${inter.variable} ${anton.variable} ${playfair.variable} ${publicSans.variable} ${plusJakartaSans.variable} antialiased`}
     >
+      <head>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="font-body">
         <SmoothScrollProvider>
           <Preloader />

@@ -4,7 +4,7 @@ import { useRef, type MouseEvent as ReactMouseEvent } from "react";
 import Image from "next/image";
 import { PillButton } from "@/components/ui/PillButton";
 import { useLenis } from "@/hooks/useLenis";
-import { SECTION_IDS, STUDIO_EMAIL } from "@/constants/nav";
+import { SECTION_IDS, STUDIO_EMAIL, NAV_HEIGHT } from "@/constants/nav";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -17,16 +17,22 @@ export function Hero() {
     lenis.scrollTo(`#${SECTION_IDS.about}`, { duration: 1.4 });
   }
 
+  function handleWorksClick(event: ReactMouseEvent<HTMLAnchorElement>) {
+    if (!lenis) return;
+    event.preventDefault();
+    lenis.scrollTo(`#${SECTION_IDS.projects}`, { offset: -NAV_HEIGHT, duration: 1.4 });
+  }
+
   return (
     <section
       ref={sectionRef}
       id={SECTION_IDS.hero}
-      className="relative flex h-svh min-h-[640px] w-full items-start overflow-hidden bg-wytes-red-deep md:min-h-[820px] md:items-end"
+      className="relative flex h-svh min-h-[640px] w-full items-start justify-center overflow-hidden bg-wytes-red-deep md:min-h-[820px]"
       data-nav-theme="light"
     >
       <div className="absolute inset-0 md:hidden">
         <Image
-          src="/images/mob_hero.png"
+          src="/images/mob_hero1.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
@@ -37,7 +43,7 @@ export function Hero() {
 
       <div className="absolute inset-0 hidden md:block">
         <Image
-          src="/images/hero_2.png"
+          src="/images/hero_4x.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
@@ -46,8 +52,8 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 w-full px-4 pb-5 pt-24 md:px-35 md:pb-10 md:pt-40">
-        <div ref={contentRef} className="max-w-4xl">
+      <div className="relative z-10 flex w-full flex-col items-center px-4 pt-24 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
+        <div ref={contentRef} className="flex max-w-5xl flex-col items-center">
           <span
             className="mb-6 flex w-fit items-center gap-1 rounded-full border border-black/15 bg-white/60 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-black backdrop-blur-sm md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
             data-nav-theme="light"
@@ -59,39 +65,42 @@ export function Hero() {
           </span>
 
           <h1
-            className="font-hero-jakarta uppercase leading-[0.95] text-black"
+            className="font-hero-general uppercase leading-[0.95] text-black"
             data-nav-theme="light"
           >
-            <span className="block text-3xl font-medium text-wytes-orange sm:text-4xl md:text-5xl lg:text-5xl">
-              Your
+            <span className="block text-3xl font-medium sm:text-4xl sm:whitespace-nowrap md:text-5xl lg:text-6xl">
+              Your <span className="font-semibold text-wytes-orange">Brand</span> is a
             </span>
-            <span className="block text-5xl font-semibold sm:text-6xl md:text-7xl lg:text-8xl">
-              BRAND
-            </span>
-            <br />
-            <span className="block text-3xl font-medium text-wytes-orange sm:text-4xl md:text-5xl lg:text-5xl">
-              is a Bussiness
-            </span>
-            <span className="block text-5xl font-semibold sm:text-6xl md:text-7xl lg:text-8xl">
-              decision
+            <span className="mt-2 block text-3xl font-semibold sm:text-4xl sm:whitespace-nowrap md:text-5xl lg:text-6xl">
+              Bussiness <span className="text-wytes-orange">Decision</span>
             </span>
           </h1>
 
           <p
-            className="mt-6 max-w-xl text-left font-body text-xs text-black sm:text-base md:mt-6 md:text-md"
+            className="mt-6 max-w-xl text-center font-body text-xs text-black sm:text-base md:mt-6 md:text-md"
             data-nav-theme="light"
           >
             Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy — not decoration.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 md:mt-8">
+          <div className="mt-8 flex w-full max-w-xs flex-col items-stretch gap-3 md:mt-8 md:w-auto md:max-w-none md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-4">
             <PillButton
-              href={`mailto:${STUDIO_EMAIL}`}
+              href={`#${SECTION_IDS.projects}`}
+              onClick={handleWorksClick}
               variant="filled"
-              className="!bg-black !text-white hover:!bg-black/80 !px-5 !py-2 !text-xs md:!px-8 md:!py-3 md:!text-base"
+              className="!bg-black !text-white !font-normal hover:!bg-black/80 !px-5 !py-2.5 !text-[11px] md:!px-8 md:!py-3 md:!text-sm"
               data-nav-theme="light"
             >
               Start a Project
+            </PillButton>
+
+            <PillButton
+              href={`mailto:${STUDIO_EMAIL}`}
+              variant="outline"
+              className="!border-black !bg-white/40 !text-black !font-normal shadow-[0_0_16px_rgba(0,0,0,0.12)] backdrop-blur-sm hover:!bg-white/60 !px-5 !py-2.5 !text-[11px] md:!px-8 md:!py-3 md:!text-sm"
+              data-nav-theme="light"
+            >
+              View Our Works
             </PillButton>
           </div>
         </div>
@@ -100,7 +109,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="light"
-          className="group mt-16 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-22 md:ml-auto md:w-fit md:flex-row md:translate-x-10 md:gap-3 md:text-xs"
+          className="group mt-16 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-black md:mt-48 md:w-fit md:flex-row md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-wytes-orange/60 md:hidden" />

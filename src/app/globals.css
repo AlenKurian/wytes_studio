@@ -18,6 +18,7 @@
   --font-hero-serif: var(--font-playfair), serif;
   --font-hero-grotesk: var(--font-public-sans), sans-serif;
   --font-hero-jakarta: var(--font-plus-jakarta-sans), sans-serif;
+  --font-hero-general: "General Sans", sans-serif;
 }
 
 html {
