@@ -52,7 +52,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 flex w-full flex-col items-center px-8 pt-24 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
+      <div className="relative z-10 flex w-full flex-col items-center px-10 pt-24 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
         <div ref={contentRef} className="flex max-w-5xl flex-col items-center">
           <span
             className="mb-6 flex w-fit items-center gap-1 rounded-full border border-black/15 bg-white/60 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-black backdrop-blur-sm md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
@@ -83,7 +83,7 @@ export function Hero() {
           </h1>
 
           <p
-            className="mt-6 max-w-[19rem] text-center font-body text-sm text-black sm:text-base md:mt-6 md:max-w-xl md:text-md"
+            className="mt-6 max-w-[17rem] text-center font-body text-xs text-black sm:text-base md:mt-6 md:max-w-xl md:text-md"
             data-nav-theme="light"
           >
             Your brand shapes how the market perceives your company, what people expect from you, and ultimately, why they choose you. We treat branding as business strategy — not decoration.
