@@ -66,7 +66,7 @@ export function Hero() {
       <div className="mt-6 relative z-10 flex w-full flex-col items-center px-6 pt-24 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
         <div ref={contentRef} className="flex max-w-5xl flex-col items-center">
           <span
-            className="mb-0 flex w-fit items-center gap-1 rounded-full border border-white/20 bg-black/30 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
+            className="-mt-6 mb-0 flex w-fit items-center gap-1 rounded-full border border-white/20 bg-black/30 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm md:mt-0 md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
             data-nav-theme="dark"
           >
             <svg viewBox="0 0 20 20" fill="currentColor" className="h-2.5 w-2.5 text-white md:h-3.5 md:w-3.5">
