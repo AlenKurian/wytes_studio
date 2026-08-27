@@ -16,7 +16,7 @@ const DIRECTION = [-80, 80];
 export function WhatWeBelieve() {
   return (
     <section
-      className="bg-gradient-to-br from-[#ffbb46] to-[#ff3600] py-16 md:py-32"
+      className="bg-black py-16 md:py-32"
       data-nav-theme="dark"
     >
       <div className="mx-auto max-w-5xl px-4 md:px-10">

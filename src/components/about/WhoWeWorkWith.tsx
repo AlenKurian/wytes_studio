@@ -5,7 +5,7 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 export function WhoWeWorkWith() {
   return (
     <section
-      className="bg-gradient-to-br from-[#ffbb46] to-[#ff3600] py-16 md:py-32"
+      className="bg-black py-16 md:py-32"
       data-nav-theme="dark"
     >
       <div className="mx-auto max-w-3xl px-4 text-center md:px-10">

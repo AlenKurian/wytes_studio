@@ -23,18 +23,18 @@ export function CtaBand() {
       className="overflow-hidden px-4 py-3 md:px-10 md:py-4"
       data-nav-theme="dark"
     >
-      <div className="rounded-2xl bg-gradient-to-br from-[#ff5b00] via-[#ff8a1e] to-[#ffbf5e] py-16 md:py-32">
+      <div className="rounded-2xl bg-black py-16 md:py-32">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-10">
           <RevealOnScroll>
             <h2
-              className="font-display text-2xl uppercase leading-tight text-wytes-cream sm:text-5xl md:text-6xl"
+              className="font-display text-2xl uppercase leading-tight text-white sm:text-5xl md:text-6xl"
               data-nav-theme="light"
             >
               Ready To Think
               <br />
               Differently?
             </h2>
-            <p className="mx-auto mt-4 max-w-xl font-body text-sm text-wytes-cream/85 sm:text-lg md:mt-6">
+            <p className="mx-auto mt-4 max-w-xl font-body text-sm text-white/85 sm:text-lg md:mt-6">
               Wytes Studio partners with a select number of ambitious businesses to build brands
               defined by clarity, distinction, authority and enduring value.
             </p>
@@ -44,7 +44,7 @@ export function CtaBand() {
             <PillButton
               href={`mailto:${STUDIO_EMAIL}`}
               variant="filled"
-              className="group !bg-wytes-ink !text-wytes-cream hover:!bg-black"
+              className="group !bg-white !text-wytes-ink hover:!bg-white/90"
             >
               Start A Conversation
               <span

@@ -26,22 +26,22 @@ export function Selective() {
           01 — OPENING STATEMENT
       --------------------------------------------- */}
 
-      <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-[#ffbd59] to-[#ff571f]">
+      <div className="overflow-hidden rounded-2xl bg-black">
         <div className="mx-auto max-w-4xl px-4 py-20 text-center md:px-10 md:py-44">
           <RevealOnScroll>
-            <span className="-mt-4 block font-body text-xs font-semibold uppercase tracking-[0.3em] text-wytes-cream/80">
+            <span className="-mt-4 block font-body text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
               Partnership Alignment
             </span>
-            <h2 className="mx-auto mt-12 max-w-3xl font-display text-3xl uppercase leading-[0.95] text-wytes-cream sm:text-6xl md:mt-20 md:text-7xl">
+            <h2 className="mx-auto mt-12 max-w-3xl font-display text-3xl uppercase leading-[0.95] text-white sm:text-6xl md:mt-20 md:text-7xl">
               Selective By Design
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl font-display text-xl uppercase leading-tight text-wytes-cream/75 sm:text-3xl md:mt-6 md:text-4xl">
+            <p className="mx-auto mt-4 max-w-3xl font-display text-xl uppercase leading-tight text-white/75 sm:text-3xl md:mt-6 md:text-4xl">
               We Work With The Ambitious
             </p>
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.15}>
-            <p className="mx-auto mt-5 max-w-xl font-body text-sm text-wytes-cream/75 sm:text-lg md:mt-8">
+            <p className="mx-auto mt-5 max-w-xl font-body text-sm text-white/75 sm:text-lg md:mt-8">
               We partner with businesses and leaders who are building something ambitious, entering
               a defining stage of growth, repositioning their market, or looking to create lasting
               distinction.
@@ -95,7 +95,7 @@ export function Selective() {
                         duration-300
                         ease-out
                         group-hover/row:translate-x-3
-                        group-hover/row:text-wytes-orange
+                        group-hover/row:text-wytes-red
                         sm:text-3xl
                         md:text-3xl
                       "
@@ -109,7 +109,7 @@ export function Selective() {
                         shrink-0
                         -translate-x-3
                         text-lg
-                        text-wytes-orange
+                        text-wytes-red
                         opacity-0
                         transition-all
                         duration-300
@@ -130,7 +130,7 @@ export function Selective() {
                         left-0
                         h-[2px]
                         w-0
-                        bg-wytes-orange
+                        bg-wytes-red
                         transition-all
                         duration-300
                         ease-out

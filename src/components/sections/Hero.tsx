@@ -63,7 +63,7 @@ export function Hero() {
       {/* Film grain for a textured, art-directed feel */}
       <div className="hero-grain pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay" />
 
-      <div className="relative z-10 flex w-full flex-col items-center px-6 pt-16 pb-5 text-center md:px-8 md:pt-20 md:pb-10">
+      <div className="relative z-10 flex w-full flex-col items-center px-6 pt-12 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
         <div ref={contentRef} className="flex max-w-5xl flex-col items-center">
           <span
             className="mb-6 flex w-fit items-center gap-1 rounded-full border border-white/20 bg-black/30 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
@@ -80,19 +80,19 @@ export function Hero() {
             data-nav-theme="dark"
           >
             <span className="block text-4xl font-medium md:hidden">
-              Your <span className="font-semibold text-[#ff9e4d]">Brand</span>
+              Your <span className="font-semibold text-white">Brand</span>
             </span>
             <span className="mt-1 block text-4xl font-medium md:hidden">
               is a Bussiness
             </span>
-            <span className="mt-1 block text-4xl font-semibold text-[#ff9e4d] md:hidden">
+            <span className="mt-1 block text-4xl font-semibold text-white md:hidden">
               Decision
             </span>
             <span className="hidden text-3xl font-normal sm:text-4xl md:block md:text-5xl md:whitespace-nowrap lg:text-6xl">
-              Your <span className="font-semibold text-[#ff9e4d]">Brand</span> is a
+              Your <span className="font-semibold text-white">Brand</span> is a
             </span>
             <span className="mt-2 hidden text-3xl font-medium sm:text-4xl md:block md:text-5xl md:whitespace-nowrap lg:text-6xl">
-              Bussiness <span className="font-semibold text-[#ff9e4d]">Decision</span>
+              Bussiness <span className="font-semibold text-white">Decision</span>
             </span>
           </h1>
 

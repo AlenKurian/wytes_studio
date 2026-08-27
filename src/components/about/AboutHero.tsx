@@ -5,7 +5,7 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 export function AboutHero() {
   return (
     <section
-      className="flex min-h-[80svh] items-center bg-gradient-to-br from-[#ffbb46] to-[#ff3600] pt-24 pb-16 md:pt-40 md:pb-24"
+      className="flex min-h-[80svh] items-center bg-black pt-24 pb-16 md:pt-40 md:pb-24"
       data-nav-theme="dark"
     >
       <div className="mx-auto max-w-4xl px-4 text-center md:px-10">
