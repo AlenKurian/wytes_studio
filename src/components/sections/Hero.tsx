@@ -132,13 +132,13 @@ export function Hero() {
           className="group mt-36 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-72 md:w-fit md:flex-row md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
-            <span className="h-px w-10 bg-wytes-orange/60 md:hidden" />
+            <span className="h-px w-10 bg-white/60 md:hidden" />
             <span className="animate-bounce flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white text-white md:h-11 md:w-11">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-4 w-4 md:h-6 md:w-6">
                 <path d="M12 4v17m0 0-6-6m6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
-            <span className="h-px w-10 bg-wytes-white md:hidden" />
+            <span className="h-px w-10 bg-white/60 md:hidden" />
           </span>
           <span className="shrink-0">Scroll to explore</span>
         </a>
