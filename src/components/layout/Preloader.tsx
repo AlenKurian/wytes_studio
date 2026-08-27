@@ -96,7 +96,7 @@ export function Preloader() {
     <div className="fixed inset-0 z-[100] h-dvh w-full overflow-hidden" aria-hidden="true">
       <div
         ref={panelRef}
-        className="relative flex h-full w-full items-center justify-center bg-[#fdfdfd] will-change-transform"
+        className="relative flex h-full w-full items-center justify-center bg-white will-change-transform"
       >
         {/* soft pulsing glow behind the mark */}
         <div
