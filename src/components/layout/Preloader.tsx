@@ -123,7 +123,7 @@ export function Preloader() {
           {/* WYTES lockup — big wordmark, small wide-tracked subtitle beneath */}
           <span
             ref={wordmarkRef}
-            className="relative inline-block pr-[0.12em] font-logo text-7xl italic leading-[0.85] text-wytes-ink will-change-transform sm:text-9xl"
+            className="relative inline-block self-center pr-[0.12em] font-logo text-7xl italic leading-[0.85] text-wytes-ink will-change-transform sm:text-9xl"
           >
             WYTES
           </span>
@@ -137,7 +137,7 @@ export function Preloader() {
           {/* progress line */}
           <div
             ref={lineWrapRef}
-            className="relative mt-6 h-px w-56 self-center overflow-hidden bg-wytes-ink/10 sm:w-64"
+            className="relative mt-6 h-px w-44 self-center overflow-hidden bg-wytes-ink/10 sm:w-64"
           >
             <div ref={lineRef} className="h-full w-full origin-left bg-wytes-ink" />
           </div>
