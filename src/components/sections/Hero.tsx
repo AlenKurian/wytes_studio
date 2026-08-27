@@ -72,18 +72,17 @@ export function Hero() {
           </span>
 
           <h1
-            className="font-body text-sm font-semibold uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-6xl"
+            className="font-body text-sm font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-5xl"
             data-nav-theme="dark"
           >
-            <span className="block md:inline">The</span>{" "}
-            <span className="block md:inline">Wytes Standard</span>
+            The Wytes Standard
           </h1>
 
           <p
-            className="mt-5 max-w-[18rem] text-center font-body text-xs text-white sm:text-base md:mt-6 md:max-w-xl md:text-md"
+            className="mt-5 max-w-[18rem] text-center font-body text-xs text-white sm:text-base md:mt-6 md:max-w-xl md:text-sm"
             data-nav-theme="dark"
           >
-            We set a higher standard for how brands are built, seen, and remembered. From strategy to identity, digital to media, every detail is designed to move your business forward.
+            SETTING THE STANDARD FOR BRANDS THAT MATTER.
           </p>
 
           <div className="mt-6 flex w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
@@ -91,7 +90,7 @@ export function Hero() {
               href={`#${SECTION_IDS.projects}`}
               onClick={handleWorksClick}
               variant="filled"
-              className="!bg-black !text-white !font-normal hover:!bg-black/80 !px-5 !py-2.5 !text-[11px] md:!px-8 md:!py-3 md:!text-sm"
+              className="!bg-black !text-white !font-normal hover:!bg-black/80 !px-5 !py-2.5 !text-[10px] md:!px-7 md:!py-3.5 md:!text-sm"
               data-nav-theme="dark"
             >
               Start a Project
@@ -100,7 +99,7 @@ export function Hero() {
             <PillButton
               href={`mailto:${STUDIO_EMAIL}`}
               variant="outline"
-              className="!border-white !bg-black/30 !text-white !font-normal shadow-[0_0_16px_rgba(0,0,0,0.25)] backdrop-blur-sm hover:!bg-black/50 !px-5 !py-2.5 !text-[11px] md:!px-8 md:!py-3 md:!text-sm"
+              className="!border-white !bg-black/30 !text-white !font-normal shadow-[0_0_16px_rgba(0,0,0,0.25)] backdrop-blur-sm hover:!bg-black/50 !px-5 !py-2.5 !text-[10px] md:!px-7 md:!py-3 md:!text-sm"
               data-nav-theme="dark"
             >
               view Our Works
@@ -112,7 +111,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="dark"
-          className="group mt-36 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-72 md:w-fit md:flex-row md:gap-3 md:text-xs"
+          className="group mt-36 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-85 md:w-fit md:flex-row md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-white/60 md:hidden" />
