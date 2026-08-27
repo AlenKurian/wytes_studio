@@ -105,7 +105,7 @@ export function Preloader() {
   if (done) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] overflow-hidden" aria-hidden="true">
+    <div className="fixed inset-0 z-[100] h-dvh w-full overflow-hidden" aria-hidden="true">
       <div
         ref={panelRef}
         className="relative flex h-full w-full items-center justify-center bg-white will-change-transform"
@@ -137,7 +137,7 @@ export function Preloader() {
           {/* progress line */}
           <div
             ref={lineWrapRef}
-            className="relative mt-6 h-px w-70 overflow-hidden bg-wytes-ink/10 sm:w-82"
+            className="relative mt-6 h-px w-56 self-center overflow-hidden bg-wytes-ink/10 sm:w-64"
           >
             <div ref={lineRef} className="h-full w-full origin-left bg-wytes-ink" />
           </div>
