@@ -55,7 +55,7 @@ export function Marquee() {
         {items.map((i) => (
           <span
             key={i}
-            className="mx-3 flex items-center gap-3 font-display text-xs tracking-[0.2em] text-wytes-ink/70 sm:text-base md:mx-4 md:gap-4"
+            className="mx-3 flex items-center gap-3 font-display text-xs tracking-[0.2em] text-wytes-ink/70 sm:text-base md:mx-4 md:gap-3"
           >
             {PHRASE}
             <span aria-hidden="true" className="text-wytes-red">

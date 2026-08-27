@@ -83,7 +83,7 @@ export function Hero() {
               Your <span className="font-semibold text-white">Brand</span>
             </span>
             <span className="mt-1 block text-4xl font-medium md:hidden">
-              is a Bussiness
+              is a Business
             </span>
             <span className="mt-1 block text-4xl font-semibold text-white md:hidden">
               Decision
@@ -92,7 +92,7 @@ export function Hero() {
               Your <span className="font-semibold text-white">Brand</span> is a
             </span>
             <span className="mt-2 hidden text-3xl font-medium sm:text-4xl md:block md:text-5xl md:whitespace-nowrap lg:text-6xl">
-              Bussiness <span className="font-semibold text-white">Decision</span>
+              Business <span className="font-semibold text-white">Decision</span>
             </span>
           </h1>
 
