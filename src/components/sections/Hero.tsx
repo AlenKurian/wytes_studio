@@ -72,13 +72,11 @@ export function Hero() {
           </span>
 
           <h1
-            className="font-logo uppercase leading-[0.85] text-white"
+            className="font-body text-sm font-semibold uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-6xl"
             data-nav-theme="dark"
           >
-            <span className="block text-2xl tracking-wide sm:text-3xl md:text-5xl">The</span>
-            <span className="mt-1 block text-5xl sm:text-7xl md:text-8xl lg:text-9xl">
-              Wytes Standard
-            </span>
+            <span className="block md:inline">The</span>{" "}
+            <span className="block md:inline">Wytes Standard</span>
           </h1>
 
           <p
@@ -114,7 +112,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="dark"
-          className="group mt-36 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-52 md:w-fit md:flex-row md:gap-3 md:text-xs"
+          className="group mt-36 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-72 md:w-fit md:flex-row md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-white/60 md:hidden" />
