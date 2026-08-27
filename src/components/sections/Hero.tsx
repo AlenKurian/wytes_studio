@@ -52,13 +52,9 @@ export function Hero() {
         />
       </div>
 
-      {/* Cinematic lighting: vignette for depth, ambient orange glow behind the headline */}
+      {/* Cinematic lighting: vignette for depth */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,transparent_0%,transparent_35%,rgba(0,0,0,0.55)_100%)]" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/60" />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-[38%] h-[36rem] w-[36rem] rounded-full bg-[radial-gradient(circle,rgba(255,158,77,0.35)_0%,rgba(255,122,26,0)_70%)] blur-3xl [animation:hero-glow-breathe_6s_ease-in-out_infinite]"
-      />
 
       {/* Film grain for a textured, art-directed feel */}
       <div className="hero-grain pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay" />
