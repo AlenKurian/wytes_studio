@@ -98,12 +98,6 @@ export function Preloader() {
         ref={panelRef}
         className="relative flex h-full w-full items-center justify-center bg-white will-change-transform"
       >
-        {/* soft pulsing glow behind the mark */}
-        <div
-          className="pointer-events-none absolute h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle,rgba(11,11,11,0.06)_0%,rgba(11,11,11,0)_70%)] blur-2xl"
-          style={{ animation: "preloader-glow-pulse 3s ease-in-out infinite" }}
-        />
-
         <div
           ref={contentRef}
           className="relative flex flex-col items-center will-change-transform"
