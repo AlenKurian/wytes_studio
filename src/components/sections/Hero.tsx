@@ -111,7 +111,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="dark"
-          className="group mt-60 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-85 md:w-fit md:flex-row md:gap-3 md:text-xs"
+          className="group mt-60 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-95 md:w-fit md:flex-row md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-white/60 md:hidden" />
