@@ -82,9 +82,9 @@ const CARDS: ServiceCard[] = [
     shortTagline: "Amplifying brands with impact and precision.",
     tagline: "Strategy transformed into visibility",
     services: ["Media Strategy", "Digital Advertising", "Outdoor Advertising", "Billboards & LED Displays", "Digital Signage", "Media Planning"],
-    bg: "bg-gradient-to-br from-wytes-orange to-wytes-red",
-    text: "text-wytes-cream",
-    subtext: "text-wytes-cream/75",
+    bg: "bg-[#D6D6D2]",
+    text: "text-wytes-ink",
+    subtext: "text-wytes-ink/60",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={ICON_STROKE} className="h-8 w-8">
         <path d="M5 20.5V13" />
