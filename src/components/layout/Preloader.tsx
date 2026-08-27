@@ -42,7 +42,7 @@ export function Preloader() {
       opacity: 0,
       filter: "blur(22px)",
     });
-    gsap.set(subtitleRef.current, { opacity: 0, y: 10, letterSpacing: "0.5em" });
+    gsap.set(subtitleRef.current, { opacity: 0, y: 10, letterSpacing: "0.7em" });
     gsap.set(lineWrapRef.current, { opacity: 0 });
     gsap.set(lineRef.current, { scaleX: 0, transformOrigin: "left center" });
     gsap.set(percentRef.current, { opacity: 0 });
@@ -59,7 +59,7 @@ export function Preloader() {
     // --- Subtitle settles in under it ---
     tl.to(
       subtitleRef.current,
-      { opacity: 1, y: 0, letterSpacing: "0.3em", duration: 0.7 },
+      { opacity: 1, y: 0, letterSpacing: "0.5em", duration: 0.7 },
       "-=0.55"
     );
 
@@ -118,18 +118,18 @@ export function Preloader() {
 
         <div
           ref={contentRef}
-          className="relative flex flex-col items-center will-change-transform"
+          className="relative flex flex-col items-stretch will-change-transform"
         >
-          {/* exact original logo — WYTES wordmark + subtitle, black text */}
+          {/* WYTES lockup — big wordmark, small wide-tracked subtitle beneath */}
           <span
             ref={wordmarkRef}
-            className="relative inline-block pr-[0.12em] font-logo text-2xl italic text-wytes-ink will-change-transform sm:text-3xl"
+            className="relative inline-block pr-[0.12em] font-logo text-7xl italic leading-[0.85] text-wytes-ink will-change-transform sm:text-9xl"
           >
             WYTES
           </span>
           <span
             ref={subtitleRef}
-            className="relative mt-1.5 font-logo text-[0.6rem] tracking-[0.3em] text-wytes-ink/70 sm:text-xs"
+            className="relative mt-2 self-stretch text-center font-logo text-[0.5rem] tracking-[0.5em] [word-spacing:0.6em] [text-indent:0.5em] text-[#8a8a8a] sm:text-sm"
           >
             THE COMPLETE STUDIO
           </span>
@@ -137,14 +137,14 @@ export function Preloader() {
           {/* progress line */}
           <div
             ref={lineWrapRef}
-            className="relative mt-6 h-px w-40 overflow-hidden bg-wytes-ink/10 sm:w-52"
+            className="relative mt-6 h-px w-70 overflow-hidden bg-wytes-ink/10 sm:w-82"
           >
             <div ref={lineRef} className="h-full w-full origin-left bg-wytes-ink" />
           </div>
 
           <span
             ref={percentRef}
-            className="relative mt-3 font-logo text-[0.6rem] tracking-[0.3em] text-wytes-ink/45 tabular-nums"
+            className="relative mt-3 self-stretch text-center font-logo text-[0.6rem] tracking-[0.3em] [text-indent:0.3em] text-wytes-ink/45 tabular-nums"
           >
             {String(percent).padStart(3, "0")}%
           </span>

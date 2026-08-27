@@ -14,7 +14,7 @@ export function WhoWeAre() {
             </span>
             <div className="relative -ml-4 mt-4 aspect-[2/3] w-full max-w-40 overflow-hidden rounded-xl sm:-ml-6 md:mt-6">
               <Image
-                src="/images/about/image1.jpg"
+                src="/images/about/wwr.jpg"
                 alt="Silhouetted figures walking through warm light"
                 fill
                 sizes="160px"

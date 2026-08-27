@@ -95,7 +95,7 @@ export function Selective() {
                         duration-300
                         ease-out
                         group-hover/row:translate-x-3
-                        group-hover/row:text-wytes-red
+                        group-hover/row:text-wytes-ink
                         sm:text-3xl
                         md:text-3xl
                       "
@@ -109,7 +109,7 @@ export function Selective() {
                         shrink-0
                         -translate-x-3
                         text-lg
-                        text-wytes-red
+                        text-wytes-ink
                         opacity-0
                         transition-all
                         duration-300
@@ -130,7 +130,7 @@ export function Selective() {
                         left-0
                         h-[2px]
                         w-0
-                        bg-wytes-red
+                        bg-wytes-ink
                         transition-all
                         duration-300
                         ease-out

@@ -27,8 +27,8 @@ export function Philosophy() {
             </span>
             <div className="relative mt-4 aspect-[2/3] w-full max-w-40 overflow-hidden rounded-xl md:mt-6">
               <Image
-                src="/images/about/image2.jpg"
-                alt="A figure standing in a glowing red tunnel"
+                src="/images/about/of.jpg"
+                alt="Our philosophy"
                 fill
                 sizes="160px"
                 className="object-cover"

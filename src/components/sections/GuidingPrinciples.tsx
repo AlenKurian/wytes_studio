@@ -87,10 +87,13 @@ export function GuidingPrinciples() {
               {PRINCIPLES.map((principle) => (
                 <span
                   key={principle}
-                  className="mx-3 flex items-center gap-3 font-display text-xl uppercase leading-none text-white sm:text-4xl md:text-3xl"
+                  className="flex items-center font-display text-xl uppercase leading-none text-white sm:text-4xl md:text-3xl"
                 >
-                  {principle}
-                  <span aria-hidden="true" className="text-wytes-orange">
+                  <span className="px-4 md:px-6">{principle}</span>
+                  <span
+                    aria-hidden="true"
+                    className="inline-flex items-center leading-none text-white"
+                  >
                     ✦
                   </span>
                 </span>

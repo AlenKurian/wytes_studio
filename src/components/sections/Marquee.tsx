@@ -51,14 +51,14 @@ export function Marquee() {
 
   return (
     <div ref={wrapperRef} className="overflow-hidden border-y border-wytes-ink/10 py-3 md:py-4">
-      <div ref={trackRef} className="flex w-max items-center whitespace-nowrap">
+      <div ref={trackRef} className="flex w-max items-center whitespace-nowrap font-display text-xs leading-none tracking-[0.2em] text-wytes-ink/70 sm:text-base">
         {items.map((i) => (
-          <span
-            key={i}
-            className="mx-3 flex items-center gap-3 font-display text-xs tracking-[0.2em] text-wytes-ink/70 sm:text-base md:mx-4 md:gap-3"
-          >
-            {PHRASE}
-            <span aria-hidden="true" className="text-wytes-red">
+          <span key={i} className="flex items-center">
+            <span className="px-4 md:px-6">{PHRASE}</span>
+            <span
+              aria-hidden="true"
+              className="inline-flex items-center leading-none text-wytes-ink"
+            >
               ✦
             </span>
           </span>

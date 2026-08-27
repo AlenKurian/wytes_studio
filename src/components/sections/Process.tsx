@@ -306,7 +306,7 @@ export function Process() {
                 className="border-t border-wytes-ink/10 py-6 md:py-10"
               >
                 <div className="grid gap-3 md:grid-cols-[180px_1fr_1fr] md:gap-6">
-                  <span className="font-mono text-sm text-wytes-orange">
+                  <span className="font-mono text-sm text-wytes-ink">
                     {step.number}
                   </span>
 
@@ -497,7 +497,7 @@ export function Process() {
               01 / 06
             </span>
 
-            <div className="relative h-px flex-1 overflow-hidden bg-wytes-ink/10">
+            <div className="relative h-1 flex-1 overflow-hidden rounded-full bg-wytes-ink/10">
               <div
                 ref={progressRef}
                 className="
@@ -505,7 +505,8 @@ export function Process() {
                   inset-y-0
                   left-0
                   w-0
-                  bg-wytes-orange
+                  rounded-full
+                  bg-wytes-ink
                 "
               />
             </div>

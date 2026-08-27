@@ -25,7 +25,7 @@ export function AboutHero() {
 
         <RevealOnScroll delay={0.15}>
           <p className="mx-auto mt-5 max-w-2xl font-body text-sm text-wytes-cream/70 sm:text-lg md:mt-8">
-            Wytes Studio is a strategy-led branding and creative studio for businesses that are
+            Studio Wytes is a strategy-led branding and creative studio for businesses that are
             intentional about how they compete, communicate and command attention. We don&apos;t
             begin with aesthetics. We begin with the business.
           </p>

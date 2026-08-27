@@ -26,7 +26,7 @@ export function About() {
 
         <RevealOnScroll delay={0.1}>
           <p className="mx-auto mt-4 max-w-2xl font-body text-sm text-wytes-ink/70 sm:text-lg md:mt-6">
-            Wytes Studio is a strategy-led branding and creative studio for businesses that are intentional about how they compete, communicate and command attention. We don't begin with aesthetics. We begin with the business.
+            Studio Wytes is a strategy-led branding and creative studio for businesses that are intentional about how they compete, communicate and command attention. We don't begin with aesthetics. We begin with the business.
           </p>
         </RevealOnScroll>
 

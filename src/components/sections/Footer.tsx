@@ -27,7 +27,6 @@ const FOOTER_COLUMNS: {
     title: "Email",
     links: [
       { label: "hello@wytes.studio", href: "mailto:hello@wytes.studio" },
-      { label: "connect@wytes.studio", href: "mailto:connect@wytes.studio" },
     ],
   },
   {
@@ -43,7 +42,10 @@ const FOOTER_COLUMNS: {
         href: "https://www.linkedin.com/company/wytes-studio",
         external: true,
       },
-      { label: "Facebook", href: "https://facebook.com", external: true },
+      {
+        label: "Facebook", href: "https://facebook.com",
+        external: true
+      },
     ],
   },
 ];
@@ -61,7 +63,7 @@ export function Footer() {
         <div className="col-span-2 md:col-span-1">
           <span className="font-logo text-2xl italic text-wytes-ink sm:text-3xl">WYTES</span>
           <p className="mt-3 max-w-xs font-body text-xs leading-relaxed text-wytes-ink/60 md:mt-4 md:text-sm">
-            Wytes Studio is a full-service brand and design agency specializing in clarity,
+            Studio Wytes is a full-service brand and design agency specializing in clarity,
             distinction and enduring value.
           </p>
         </div>
@@ -88,8 +90,8 @@ export function Footer() {
       </div>
 
       <div className="flex flex-col gap-2 border-t border-wytes-ink/10 px-4 py-4 font-body text-xs text-wytes-ink/45 sm:flex-row sm:items-center sm:justify-between sm:px-10 md:px-16 md:py-6">
-        <p>©{year} Wytes Studio. All rights reserved.</p>
-        <p>Designed &amp; built by Wytes Studio</p>
+        <p>©{year} Studio Wytes. All rights reserved.</p>
+        <p>Designed &amp; built by Studio Wytes</p>
       </div>
     </footer>
   );

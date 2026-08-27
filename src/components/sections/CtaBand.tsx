@@ -35,7 +35,7 @@ export function CtaBand() {
               Differently?
             </h2>
             <p className="mx-auto mt-4 max-w-xl font-body text-sm text-white/85 sm:text-lg md:mt-6">
-              Wytes Studio partners with a select number of ambitious businesses to build brands
+              Studio Wytes partners with a select number of ambitious businesses to build brands
               defined by clarity, distinction, authority and enduring value.
             </p>
           </RevealOnScroll>

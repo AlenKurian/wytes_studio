@@ -69,7 +69,7 @@ export function Hero() {
             className="mb-6 flex w-fit items-center gap-1 rounded-full border border-white/20 bg-black/30 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
             data-nav-theme="dark"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-2.5 w-2.5 text-wytes-orange md:h-3.5 md:w-3.5">
+            <svg viewBox="0 0 20 20" fill="currentColor" className="h-2.5 w-2.5 text-white md:h-3.5 md:w-3.5">
               <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z" />
             </svg>
             The Complete Studio
