@@ -63,7 +63,7 @@ export function Hero() {
       {/* Film grain for a textured, art-directed feel */}
       <div className="hero-grain pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay" />
 
-      <div className="mt-6 relative z-10 flex w-full flex-col items-center px-6 pt-24 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
+      <div className="mt-6 relative z-10 flex w-full flex-col items-center px-6 pt-32 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
         <div ref={contentRef} className="flex max-w-5xl flex-col items-center">
           <span
             className="-mt-6 mb-0 flex w-fit items-center gap-1 rounded-full border border-white/20 bg-black/30 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm md:mt-0 md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
