@@ -32,7 +32,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 md:hidden">
         <Image
-          src="/images/hero_1.png"
+          src="/images/mob_hero.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
@@ -72,7 +72,7 @@ export function Hero() {
           </span>
 
           <h1
-            className="font-body text-lg font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-5xl"
+            className="font-body text-sm font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-5xl"
             data-nav-theme="dark"
           >
             The Wytes Standard
@@ -93,7 +93,7 @@ export function Hero() {
               className="!bg-black !text-white !font-normal hover:!bg-black/80 !px-5 !py-2.5 !text-[10px] md:!px-7 md:!py-3.5 md:!text-sm"
               data-nav-theme="dark"
             >
-              Start a Project
+              view Our Works
             </PillButton>
 
             <PillButton
@@ -102,7 +102,7 @@ export function Hero() {
               className="!border-white !bg-black/30 !text-white !font-normal shadow-[0_0_16px_rgba(0,0,0,0.25)] backdrop-blur-sm hover:!bg-black/50 !px-5 !py-2.5 !text-[10px] md:!px-7 md:!py-3 md:!text-sm"
               data-nav-theme="dark"
             >
-              view Our Works
+              Start a Project
             </PillButton>
           </div>
         </div>
