@@ -43,12 +43,12 @@ export function Hero() {
 
       <div className="absolute inset-0 hidden md:block">
         <Image
-          src="/images/hero_1.png"
+          src="/images/hero_2.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_65%]"
+          className="object-cover object-[center_55%]"
         />
       </div>
 
