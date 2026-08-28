@@ -72,7 +72,7 @@ export function Hero() {
           </span>
 
           <h1
-            className="font-body text-sm font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-5xl"
+            className="font-body text-sm font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-3xl"
             data-nav-theme="dark"
           >
             The Wytes Standard
