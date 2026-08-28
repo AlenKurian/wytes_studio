@@ -82,7 +82,7 @@ export function Hero() {
             className="mt-5 max-w-[18rem] text-center font-body text-[10px] text-white sm:text-base md:mt-6 md:max-w-xl md:text-sm"
             data-nav-theme="dark"
           >
-            SETTING THE STANDARD FOR BRANDS THAT MATTER.
+            CREATE WITH INTENT. DELIVER WITH CONVICTION.
           </p>
 
           <div className="mt-6 flex w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
