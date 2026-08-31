@@ -4,7 +4,7 @@ import { useRef, type MouseEvent as ReactMouseEvent } from "react";
 import Image from "next/image";
 import { PillButton } from "@/components/ui/PillButton";
 import { useLenis } from "@/hooks/useLenis";
-import { SECTION_IDS, STUDIO_EMAIL, NAV_HEIGHT } from "@/constants/nav";
+import { SECTION_IDS, STUDIO_EMAIL } from "@/constants/nav";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -15,12 +15,6 @@ export function Hero() {
     if (!lenis) return;
     event.preventDefault();
     lenis.scrollTo(`#${SECTION_IDS.about}`, { duration: 1.4 });
-  }
-
-  function handleWorksClick(event: ReactMouseEvent<HTMLAnchorElement>) {
-    if (!lenis) return;
-    event.preventDefault();
-    lenis.scrollTo(`#${SECTION_IDS.projects}`, { offset: -NAV_HEIGHT, duration: 1.4 });
   }
 
   return (
@@ -61,20 +55,24 @@ export function Hero() {
 
       <div className="mt-6 relative z-10 flex w-full flex-col items-center px-6 pt-32 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
         <div ref={contentRef} className="flex max-w-5xl flex-col items-center">
-          {/* Reserved space for former badge / headline / subhead */}
-          <div aria-hidden className="h-[136px] w-full md:h-[188px]" />
+          {/* Reserved space for former badge */}
+          <div aria-hidden className="h-9 w-full md:h-14" />
 
-          <div className="flex w-full flex-col items-center gap-3 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
-            <PillButton
-              href={`#${SECTION_IDS.projects}`}
-              onClick={handleWorksClick}
-              variant="filled"
-              className="!bg-black !text-white !font-normal hover:!bg-black/80 !px-5 !py-2.5 !text-[10px] md:!px-7 md:!py-3.5 md:!text-sm"
-              data-nav-theme="dark"
-            >
-              view Our Works
-            </PillButton>
+          <h1
+            className="font-body text-sm font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-3xl"
+            data-nav-theme="dark"
+          >
+            Make Your Mark
+          </h1>
 
+          <p
+            className="mt-5 max-w-[18rem] text-center font-body text-[10px] text-white sm:text-base md:mt-6 md:max-w-xl md:text-sm"
+            data-nav-theme="dark"
+          >
+            Ideas shaped into brands that matter
+          </p>
+
+          <div className="mt-6 flex w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
             <PillButton
               href={`mailto:${STUDIO_EMAIL}`}
               variant="outline"
