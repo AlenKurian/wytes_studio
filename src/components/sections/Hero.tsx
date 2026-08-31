@@ -59,17 +59,17 @@ export function Hero() {
           <div aria-hidden className="h-9 w-full md:h-14" />
 
           <h1
-            className="font-body text-lg font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-3xl"
+            className="font-body text-lg font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-4xl"
             data-nav-theme="dark"
           >
-            Make Your Mark
+            Think deeper build better
           </h1>
 
           <p
-            className="mt-5 max-w-[18rem] text-center font-body text-[10px] text-white sm:text-base md:mt-6 md:max-w-xl md:text-sm"
+            className="mt-5 max-w-[18rem] text-center font-body uppercase text-[10px] text-white sm:text-base md:mt-6 md:max-w-xl md:text-sm"
             data-nav-theme="dark"
           >
-            Ideas shaped into brands that matter
+            From sharper thinking to stronger brands.
           </p>
 
           <div className="mt-6 flex w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
