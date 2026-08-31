@@ -59,7 +59,7 @@ export function Hero() {
           <div aria-hidden className="h-9 w-full md:h-14" />
 
           <h1
-            className="font-body text-sm font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-3xl"
+            className="font-body text-lg font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-3xl"
             data-nav-theme="dark"
           >
             Make Your Mark
