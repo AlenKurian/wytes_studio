@@ -61,31 +61,10 @@ export function Hero() {
 
       <div className="mt-6 relative z-10 flex w-full flex-col items-center px-6 pt-32 pb-5 text-center md:px-8 md:pt-24 md:pb-10">
         <div ref={contentRef} className="flex max-w-5xl flex-col items-center">
-          <span
-            className="-mt-10 mb-4 flex w-fit items-center gap-1 rounded-full border border-white/20 bg-black/30 px-2.5 py-1 font-body text-[9px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm md:mt-0 md:mb-8 md:gap-2 md:px-4 md:py-2 md:text-s"
-            data-nav-theme="dark"
-          >
-            <svg viewBox="0 0 20 20" fill="currentColor" className="h-2.5 w-2.5 text-white md:h-3.5 md:w-3.5">
-              <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z" />
-            </svg>
-            The Complete Studio
-          </span>
+          {/* Reserved space for former badge / headline / subhead */}
+          <div aria-hidden className="h-[136px] w-full md:h-[188px]" />
 
-          <h1
-            className="font-body text-sm font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-3xl"
-            data-nav-theme="dark"
-          >
-            The Wytes Standard
-          </h1>
-
-          <p
-            className="mt-5 max-w-[18rem] text-center font-body text-[10px] text-white sm:text-base md:mt-6 md:max-w-xl md:text-sm"
-            data-nav-theme="dark"
-          >
-            CREATE WITH INTENT. DELIVER WITH CONVICTION.
-          </p>
-
-          <div className="mt-6 flex w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
+          <div className="flex w-full flex-col items-center gap-3 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
             <PillButton
               href={`#${SECTION_IDS.projects}`}
               onClick={handleWorksClick}
