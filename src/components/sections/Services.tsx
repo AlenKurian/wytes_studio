@@ -45,7 +45,7 @@ export function Services() {
 
           <RevealOnScroll
             delay={0.1}
-            className="mx-auto mt-3 flex max-w-6xl flex-col gap-3 text-left font-body text-xs text-wytes-ink/50 sm:flex-row sm:justify-between sm:gap-10 sm:text-sm"
+            className="mx-auto mt-8 flex max-w-6xl flex-col gap-3 text-left font-body text-xs text-wytes-ink/50 sm:flex-row sm:justify-between sm:gap-10 sm:text-sm"
           >
             <p className="sm:max-w-68 sm:text-center">
               From the first thought to the final execution, we combine strategy, design, and
@@ -57,7 +57,7 @@ export function Services() {
             </p>
           </RevealOnScroll>
 
-          <RevealOnScroll delay={0.2} className="mt-14 flex justify-center md:mt-24">
+          <RevealOnScroll delay={0.2} className="mt-12 flex justify-center md:mt-20">
             <a
               href={`#${SERVICES_CARDS_ID}`}
               onClick={handleExploreClick}

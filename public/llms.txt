@@ -1,0 +1,29 @@
+# WYTES Studio
+
+> WYTES Studio is a strategy-led branding and creative studio. We build the brands behind businesses — brands, websites and digital experiences that refuse to blend in. We don't begin with aesthetics; we begin with the business.
+
+WYTES Studio (also written "Studio Wytes") works with businesses that are intentional about how they compete, communicate and command attention. Engagements combine brand strategy, identity design, and digital production.
+
+## Pages
+
+- [Home](https://www.wytes.studio): Studio overview — positioning, selected work, services, process, and guiding principles.
+- [About](https://www.wytes.studio/about): Who we are, our philosophy, why we exist, our approach, and what we believe.
+
+## Services
+
+- Brand Identity: Naming, logo systems, and visual languages that give a brand its voice.
+- Web Design: Interfaces engineered for clarity, emotion, and conversion.
+- Web Development: Fast, resilient builds that bring design to life in the browser.
+- Motion & Animation: Movement that adds rhythm, depth, and delight to every interaction.
+- Digital Strategy: Roadmaps that turn ambition into a measurable, compounding plan.
+- Content Production: Photography, film, and copy crafted to tell your story right.
+
+## Contact
+
+- Email: hello@wytes.studio
+- Start a project: mailto:hello@wytes.studio
+
+## Resources
+
+- [Sitemap](https://www.wytes.studio/sitemap.xml)
+- [Robots](https://www.wytes.studio/robots.txt)
