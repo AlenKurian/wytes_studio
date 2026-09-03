@@ -112,6 +112,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${archivoBlack.variable} ${archivo.variable} ${inter.variable} ${anton.variable} ${playfair.variable} ${publicSans.variable} ${plusJakartaSans.variable} antialiased`}
     >
       <head>
+        <meta name="google-site-verification" content="tn04Qx5EFtO6KUNfLRymNniIiyBS_YlDgzYnCcQ05cU" />
         <link
           href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
           rel="stylesheet"
