@@ -62,14 +62,14 @@ export function Hero() {
             className="font-body text-lg font-semibold whitespace-nowrap uppercase tracking-[0.1em] text-white/80 sm:text-base md:text-4xl"
             data-nav-theme="dark"
           >
-            We don't decorate <br /> businesses
+            Your Vision, Our Frame.
           </h1>
 
           <p
             className="mt-5 max-w-[18rem] text-center font-body  text-[10px] text-white sm:text-base md:mt-6 md:max-w-xl md:text-sm"
             data-nav-theme="dark"
           >
-            We build the brands behind them.
+            From pre-production to final edit, we bring your ideas to life. <br /> Collaborate with a team that capture the moment.
           </p>
 
           <div className="mt-6 flex w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row md:flex-wrap md:justify-center md:gap-4">
@@ -88,7 +88,7 @@ export function Hero() {
           href={`#${SECTION_IDS.about}`}
           onClick={handleScrollDown}
           data-nav-theme="dark"
-          className="group mt-75 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-90 md:w-fit md:flex-row md:gap-3 md:text-xs"
+          className="group mt-75 flex w-full flex-col items-center gap-2 font-body text-[9px] font-bold uppercase tracking-[0.30em] text-white md:mt-93 md:w-fit md:flex-row md:gap-3 md:text-xs"
         >
           <span className="flex w-full items-center justify-center gap-2 md:w-auto md:gap-3">
             <span className="h-px w-10 bg-white/60 md:hidden" />
