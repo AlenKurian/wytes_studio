@@ -20,7 +20,7 @@ const TEAM: Member[] = [
     // linkedin: "https://linkedin.com",
   },
   {
-    name: "Nesla",
+    name: "Nasla",
     role: "Digital Marketer",
     image: "/images/about/emp_2.jpg",
     // x: "https://x.com",
