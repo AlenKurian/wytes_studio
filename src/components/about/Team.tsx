@@ -60,7 +60,7 @@ function LinkedInIcon() {
 
 export function Team() {
   return (
-    <section className="bg-wytes-cream pt-16 pb-0 md:pt-32" data-nav-theme="light">
+    <section className="bg-wytes-cream pt-16 pb-16 md:pt-32 md:pb-20" data-nav-theme="light">
       <div className="mx-auto max-w-6xl px-4 md:px-10">
         <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-end md:gap-16">
           <RevealOnScroll>
@@ -134,22 +134,17 @@ export function Team() {
           ))}
         </div>
 
-        <div className="relative mt-20 md:mt-22">
-          {/* <RevealOnScroll
-            delay={0.1}
-            className="mt-6 flex flex-col items-start justify-between gap-6 md:-mt-4 md:flex-row md:items-end"
-          > */}
-            <p className="font-display text-lg uppercase leading-tight text-wytes-ink sm:text-2xl md:text-3xl">
-              Behind Every Result Is{" "}
-              <span className="font-display-light">A Team That Cares.</span>
-            </p>
-          {/* </RevealOnScroll> */}
-          {/* <span
+        <div className="mt-20 flex flex-col items-start justify-between gap-8 md:mt-14 md:flex-row md:items-end md:gap-16">
+          <p className="font-display text-lg uppercase leading-tight text-wytes-ink sm:text-2xl md:text-2xl">
+            Behind Every Result Is{" "}
+            <span className="font-display-light">A Team That Cares.</span>
+          </p>
+          <span
             aria-hidden="true"
-            className="mt-10 pointer-events-none block select-none text-center font-logo text-[22vw] uppercase leading-[0.75] text-wytes-ink/5 md:text-[10vw]"
+            className="select-none font-logo text-4xl italic leading-none text-wytes-ink sm:text-5xl md:text-2xl"
           >
-           STUDIO WYTES
-          </span> */}
+            WYTES
+          </span>
         </div>
       </div>
     </section>
