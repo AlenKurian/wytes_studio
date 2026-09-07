@@ -26,7 +26,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 md:hidden">
         <Image
-          src="/images/new_mobhero.png"
+          src="/images/mobile_hero.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
@@ -37,7 +37,7 @@ export function Hero() {
 
       <div className="absolute inset-0 hidden md:block">
         <Image
-          src="/images/new_hero.png"
+          src="/images/desktop_hero.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
