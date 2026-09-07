@@ -135,13 +135,13 @@ export function Team() {
         </div>
 
         <div className="mt-20 flex flex-col items-start justify-between gap-8 md:mt-14 md:flex-row md:items-end md:gap-16">
-          <p className="font-display text-lg uppercase leading-tight text-wytes-ink sm:text-2xl md:text-2xl">
+          <p className="font-display text-sm uppercase leading-tight text-wytes-ink sm:text-2xl md:text-2xl">
             Behind Every Result Is{" "}
             <span className="font-display-light">A Team That Cares.</span>
           </p>
           <span
             aria-hidden="true"
-            className="select-none font-logo text-4xl italic leading-none text-wytes-ink sm:text-5xl md:text-2xl"
+            className="hidden select-none font-logo text-4xl italic leading-none text-wytes-ink sm:text-5xl md:block md:text-2xl"
           >
             WYTES
           </span>
