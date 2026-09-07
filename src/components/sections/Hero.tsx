@@ -26,12 +26,12 @@ export function Hero() {
     >
       <div className="absolute inset-0 md:hidden">
         <Image
-          src="/images/new_mob.png"
+          src="/images/new_mobhero.png"
           alt="Abstract glass ribbon twisting through a glowing ring, floating over a glossy orange floor"
           fill
           priority
           sizes="100vw"
-          className="object-cover scale-90"
+          className="object-cover"
         />
       </div>
 
