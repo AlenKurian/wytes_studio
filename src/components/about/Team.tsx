@@ -144,12 +144,12 @@ export function Team() {
               <span className="font-display-light">A Team That Cares.</span>
             </p>
           {/* </RevealOnScroll> */}
-          <span
+          {/* <span
             aria-hidden="true"
             className="mt-10 pointer-events-none block select-none text-center font-logo text-[22vw] uppercase leading-[0.75] text-wytes-ink/5 md:text-[10vw]"
           >
            STUDIO WYTES
-          </span>
+          </span> */}
         </div>
       </div>
     </section>
