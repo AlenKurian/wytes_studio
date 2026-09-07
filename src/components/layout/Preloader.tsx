@@ -81,8 +81,8 @@ export function Preloader() {
     gsap.set(lineRef.current, { scaleX: 0, transformOrigin: "left center" });
     gsap.set(percentRef.current, { opacity: 0 });
 
-    // --- Loading phase (~3.6s): progress runs while tiles erode away ---
-    const LOAD = 3.6;
+    // --- Loading phase (~2.6s): progress runs while tiles erode away ---
+    const LOAD = 2.6;
     tl.to(overlayRef.current, { opacity: 1, duration: 0.3 });
     tl.to(lineWrapRef.current, { opacity: 1, duration: 0.3 }, "<");
     tl.to(percentRef.current, { opacity: 1, duration: 0.3 }, "<");
@@ -116,7 +116,7 @@ export function Preloader() {
           rotation: t.rot,
           scale: 0.2,
           opacity: 0,
-          duration: 0.5 + Math.random() * 0.3,
+          duration: 0.35 + Math.random() * 0.22,
           ease: "power2.out",
         },
         at
@@ -137,18 +137,18 @@ export function Preloader() {
           rotation: t.rot * 1.5,
           scale: 0.15,
           opacity: 0,
-          duration: 0.6,
+          duration: 0.45,
           ease: "power2.out",
         },
-        LOAD - 0.1 + Math.random() * 0.15
+        LOAD - 0.1 + Math.random() * 0.12
       );
     });
 
     // --- Panel lifts away ---
     tl.to(
       panelRef.current,
-      { yPercent: -100, duration: 0.9, ease: "power4.inOut" },
-      LOAD + 0.5
+      { yPercent: -100, duration: 0.8, ease: "power4.inOut" },
+      LOAD + 0.35
     );
 
     return () => {
