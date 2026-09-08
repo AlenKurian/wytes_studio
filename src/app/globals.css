@@ -69,6 +69,15 @@ html.lenis body {
   overflow: hidden;
 }
 
+@keyframes preloader-logo-shine {
+  0% {
+    transform: translateX(-160%) rotate(8deg);
+  }
+  100% {
+    transform: translateX(160%) rotate(8deg);
+  }
+}
+
 @keyframes preloader-glow-pulse {
   0%,
   100% {

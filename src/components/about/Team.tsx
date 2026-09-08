@@ -13,28 +13,28 @@ type Member = {
 
 const TEAM: Member[] = [
   {
-    name: "Mubassira",
+    name: "Mubashira M",
     role: "Digital Marketer",
     image: "/images/about/emp_1.jpg",
     // x: "https://x.com",
     // linkedin: "https://linkedin.com",
   },
   {
-    name: "Nasla",
+    name: "Nesla Yasmin",
     role: "Digital Marketer",
     image: "/images/about/emp_2.jpg",
     // x: "https://x.com",
     // linkedin: "https://linkedin.com",
   },
   {
-    name: "Riyara",
+    name: "Riyara K",
     role: "Web Developer",
     image: "/images/about/emp_3.jpg",
     // x: "https://x.com",
     // linkedin: "https://linkedin.com",
   },
   {
-    name: "Alen",
+    name: "Alen Kurian",
     role: "Web Developer",
     image: "/images/about/emp_4.jpg",
     // x: "https://x.com",
