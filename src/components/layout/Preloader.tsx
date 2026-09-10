@@ -44,15 +44,15 @@ export function Preloader() {
       scaleX: 0,
       transformOrigin: "0% 50%",
     });
-    gsap.set(textRef.current, { opacity: 0, scale: 1.06, transformOrigin: "50% 50%" });
+    gsap.set(textRef.current, { opacity: 0, scale: 1.02, transformOrigin: "50% 50%" });
     gsap.set(percentRef.current, { opacity: 0 });
 
-    // --- Wordmark settles in (still knocked out — reads as ink-on-ink relief) ---
+    // --- Placeholder lockup snaps into place ---
     tl.to(textRef.current, {
       opacity: 1,
       scale: 1,
-      duration: 1,
-      ease: "power3.out",
+      duration: 0.4,
+      ease: "power2.out",
     });
 
     // --- The fill sweeps left -> right through the letters, in sync with progress ---
@@ -168,13 +168,11 @@ export function Preloader() {
               </clipPath>
             </defs>
 
-            {/* always-visible faint outline of the lockup */}
+            {/* solid pale placeholder of the lockup — the dark fill wipes through it */}
             <g
               ref={textRef}
-              fill="none"
-              stroke="var(--color-wytes-ink)"
-              strokeWidth="1.4"
-              strokeOpacity="0.28"
+              fill="var(--color-wytes-ink)"
+              fillOpacity="0.12"
               className="will-change-transform"
             >
               <text
@@ -198,7 +196,6 @@ export function Preloader() {
                 fontFamily="var(--font-inter), sans-serif"
                 fontWeight={300}
                 fontSize="34"
-                strokeWidth="0.6"
               >
                 {TAGLINE}
               </text>
