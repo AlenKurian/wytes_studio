@@ -17,8 +17,6 @@ export function Preloader() {
   const fillRef = useRef<SVGRectElement>(null);
   const taglineVeilRef = useRef<SVGRectElement>(null);
   const textRef = useRef<SVGGElement>(null);
-  const lineRef = useRef<HTMLDivElement>(null);
-  const lineWrapRef = useRef<HTMLDivElement>(null);
   const percentRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -47,8 +45,6 @@ export function Preloader() {
       transformOrigin: "0% 50%",
     });
     gsap.set(textRef.current, { opacity: 0, scale: 1.06, transformOrigin: "50% 50%" });
-    gsap.set(lineWrapRef.current, { opacity: 0 });
-    gsap.set(lineRef.current, { scaleX: 0, transformOrigin: "left center" });
     gsap.set(percentRef.current, { opacity: 0 });
 
     // --- Wordmark settles in (still knocked out — reads as ink-on-ink relief) ---
@@ -60,31 +56,25 @@ export function Preloader() {
     });
 
     // --- The fill sweeps left -> right through the letters, in sync with progress ---
-    tl.to(lineWrapRef.current, { opacity: 1, duration: 0.5 }, "-=0.3");
-    tl.to(percentRef.current, { opacity: 1, duration: 0.5 }, "<");
+    tl.to(percentRef.current, { opacity: 1, duration: 0.6 }, "-=0.3");
     tl.to(
       [fillRef.current, taglineVeilRef.current],
-      { scaleX: 1, duration: 2.8, ease: "power1.inOut" },
+      { scaleX: 1, duration: 3.4, ease: "none" },
       "<"
     );
-    tl.to(lineRef.current, { scaleX: 1, duration: 2.8, ease: "power1.inOut" }, "<");
     tl.to(
       counter,
       {
         value: 100,
-        duration: 2.8,
-        ease: "power1.inOut",
+        duration: 3.4,
+        ease: "none",
         onUpdate: () => setPercent(Math.round(counter.value)),
       },
       "<"
     );
 
     // --- Exit: brief hold on the finished wordmark, then the panel wipes up ---
-    tl.to(
-      [lineWrapRef.current, percentRef.current],
-      { opacity: 0, duration: 0.5 },
-      "+=0.4"
-    );
+    tl.to(percentRef.current, { opacity: 0, duration: 0.5 }, "+=0.4");
     tl.to(
       textRef.current,
       { scale: 1.04, opacity: 0, duration: 0.7, ease: "power2.in" },
@@ -245,21 +235,11 @@ export function Preloader() {
             </g>
           </svg>
 
-          {/* progress line + % beneath the wordmark */}
-          <div className="mt-8 flex flex-col items-center">
-            <div
-              ref={lineWrapRef}
-              className="relative h-px w-40 overflow-hidden bg-wytes-ink/15 sm:w-56"
-            >
-              <div
-                ref={lineRef}
-                className="h-full w-full origin-left bg-wytes-ink"
-              />
-            </div>
-
+          {/* progress % beneath the wordmark */}
+          <div className="mt-5 flex flex-col items-center">
             <span
               ref={percentRef}
-              className="relative mt-3 text-center font-logo text-[0.6rem] tracking-[0.3em] [text-indent:0.3em] text-wytes-ink/45 tabular-nums"
+              className="relative text-center font-logo text-lg tracking-[0.3em] [text-indent:0.3em] text-wytes-ink/45 tabular-nums sm:text-xl"
             >
               {String(percent).padStart(3, "0")}%
             </span>
