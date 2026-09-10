@@ -155,7 +155,7 @@ export function Preloader() {
         {/* THE COMPLETE STUDIO — small, widely tracked */}
         <span
           ref={taglineRef}
-          className="mt-5 block font-body text-[2.6vw] font-light uppercase tracking-[0.5em] text-white [text-indent:0.5em] sm:text-xs"
+          className="mt-5 block font-body text-[1.7vw] font-light uppercase tracking-[0.4em] text-white [text-indent:0.4em] sm:text-xs sm:tracking-[0.5em] sm:[text-indent:0.5em]"
         >
           {TAGLINE}
         </span>
