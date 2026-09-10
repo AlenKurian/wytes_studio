@@ -208,6 +208,7 @@ export function Preloader() {
                 fontFamily="var(--font-inter), sans-serif"
                 fontWeight={300}
                 fontSize="34"
+                strokeWidth="0.6"
               >
                 {TAGLINE}
               </text>
