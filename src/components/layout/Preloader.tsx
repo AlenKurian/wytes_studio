@@ -38,6 +38,11 @@ export function Preloader() {
       },
     });
 
+    // portrait / small screens get a square frame; wider screens a landscape one
+    const isMobile = window.matchMedia("(max-width: 640px)").matches;
+    const frameWidth = isMobile ? "82vw" : "min(78vw, 620px)";
+    const frameHeight = isMobile ? "82vw" : "62vh";
+
     // --- Initial state: shutters closed; frame is a 1px-wide slit at center ---
     gsap.set(topRef.current, { top: 0, bottom: "50%" });
     gsap.set(bottomRef.current, { top: "50%", bottom: 0 });
@@ -46,14 +51,14 @@ export function Preloader() {
     gsap.set(frameRef.current, { width: 0, height: 4, opacity: 0 });
     gsap.set(lockupRef.current, { opacity: 0, scale: 1.04 });
 
-    // --- 1. a thin white vertical line grows in the center ---
+    // --- 1. a thin vertical line grows in the center ---
     tl.to(frameRef.current, { opacity: 1, duration: 0.2 });
-    tl.to(frameRef.current, { height: "62vh", duration: 0.9, ease: "power2.out" }, "<0.05");
+    tl.to(frameRef.current, { height: frameHeight, duration: 0.9, ease: "power2.out" }, "<0.05");
 
-    // --- 2. the line opens into a rectangular frame ---
+    // --- 2. the line opens into a frame (square on mobile, landscape otherwise) ---
     tl.to(
       frameRef.current,
-      { width: "min(78vw, 620px)", duration: 0.8, ease: "power2.inOut" },
+      { width: frameWidth, duration: 0.8, ease: "power2.inOut" },
       "+=0.15"
     );
 
