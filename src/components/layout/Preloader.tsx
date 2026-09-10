@@ -66,7 +66,7 @@ export function Preloader() {
       counter,
       {
         value: 100,
-        duration: 3.4,
+        duration: 2.5,
         ease: "none",
         onUpdate: () => setPercent(Math.round(counter.value)),
       },
