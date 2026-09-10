@@ -236,10 +236,10 @@ export function Preloader() {
           </svg>
 
           {/* progress % beneath the wordmark */}
-          <div className="mt-5 flex flex-col items-center">
+          <div className="mt-2 flex flex-col items-center">
             <span
               ref={percentRef}
-              className="relative text-center font-logo text-lg tracking-[0.3em] [text-indent:0.3em] text-wytes-ink/45 tabular-nums sm:text-xl"
+              className="relative text-center font-logo text-xs tracking-[0.3em] [text-indent:0.3em] text-wytes-ink/45 tabular-nums sm:text-md"
             >
               {String(percent).padStart(3, "0")}%
             </span>
