@@ -9,15 +9,17 @@ const TAGLINE = "THE COMPLETE STUDIO";
 
 export function Preloader() {
   const reducedMotion = useReducedMotion();
-  const [percent, setPercent] = useState(0);
   const [done, setDone] = useState(false);
 
   const rootRef = useRef<HTMLDivElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
-  const fillRef = useRef<SVGRectElement>(null);
-  const taglineVeilRef = useRef<SVGRectElement>(null);
-  const textRef = useRef<SVGGElement>(null);
-  const percentRef = useRef<HTMLSpanElement>(null);
+  // the four black shutters that pull back to open the frame
+  const topRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const leftRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+  // the thin white line that opens into a frame
+  const frameRef = useRef<HTMLDivElement>(null);
+  const lockupRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (reducedMotion) {
@@ -28,63 +30,48 @@ export function Preloader() {
     const html = document.documentElement;
     html.style.overflow = "hidden";
 
-    const counter = { value: 0 };
-
     const tl = gsap.timeline({
-      defaults: { ease: "power2.inOut" },
+      defaults: { ease: "power3.inOut" },
       onComplete: () => {
         html.style.overflow = "";
         setDone(true);
       },
     });
 
-    // --- Initial states ---
-    // fill rect is clipped to 0 width via a scaleX transform on its own origin
-    gsap.set([fillRef.current, taglineVeilRef.current], {
-      scaleX: 0,
-      transformOrigin: "0% 50%",
-    });
-    gsap.set(textRef.current, { opacity: 0, scale: 1.02, transformOrigin: "50% 50%" });
-    gsap.set(percentRef.current, { opacity: 0 });
+    // --- Initial state: shutters closed; frame is a 1px-wide slit at center ---
+    gsap.set(topRef.current, { top: 0, bottom: "50%" });
+    gsap.set(bottomRef.current, { top: "50%", bottom: 0 });
+    gsap.set(leftRef.current, { left: 0, right: "50%" });
+    gsap.set(rightRef.current, { left: "50%", right: 0 });
+    gsap.set(frameRef.current, { width: 0, height: 4, opacity: 0 });
+    gsap.set(lockupRef.current, { opacity: 0, scale: 1.04 });
 
-    // --- Placeholder lockup snaps into place ---
-    tl.to(textRef.current, {
-      opacity: 1,
-      scale: 1,
-      duration: 0.4,
-      ease: "power2.out",
-    });
+    // --- 1. a thin white vertical line grows in the center ---
+    tl.to(frameRef.current, { opacity: 1, duration: 0.2 });
+    tl.to(frameRef.current, { height: "62vh", duration: 0.9, ease: "power2.out" }, "<0.05");
 
-    // --- The fill sweeps left -> right through the letters, in sync with progress ---
-    tl.to(percentRef.current, { opacity: 1, duration: 0.6 }, "-=0.3");
+    // --- 2. the line opens into a rectangular frame ---
     tl.to(
-      [fillRef.current, taglineVeilRef.current],
-      { scaleX: 1, duration: 3.4, ease: "none" },
-      "<"
-    );
-    tl.to(
-      counter,
-      {
-        value: 100,
-        duration: 2.5,
-        ease: "none",
-        onUpdate: () => setPercent(Math.round(counter.value)),
-      },
-      "<"
+      frameRef.current,
+      { width: "min(78vw, 620px)", duration: 0.8, ease: "power2.inOut" },
+      "+=0.15"
     );
 
-    // --- Exit: brief hold on the finished wordmark, then the panel wipes up ---
-    tl.to(percentRef.current, { opacity: 0, duration: 0.5 }, "+=0.4");
+    // --- 3. the lockup fades up inside the frame ---
     tl.to(
-      textRef.current,
-      { scale: 1.04, opacity: 0, duration: 0.7, ease: "power2.in" },
-      "<"
+      lockupRef.current,
+      { opacity: 1, scale: 1, duration: 0.9, ease: "power2.out" },
+      "-=0.3"
     );
-    tl.to(
-      panelRef.current,
-      { yPercent: -100, duration: 1.1, ease: "power4.inOut" },
-      "-=0.25"
-    );
+
+    // --- 4. hold, then the shutters pull fully open, revealing the site ---
+    tl.to(lockupRef.current, { opacity: 0, duration: 0.5, ease: "power2.in" }, "+=0.6");
+    tl.to(frameRef.current, { opacity: 0, duration: 0.4 }, "<");
+    const shutterEase = "power4.inOut";
+    tl.to(topRef.current, { bottom: "100%", duration: 1, ease: shutterEase }, "<0.1");
+    tl.to(bottomRef.current, { top: "100%", duration: 1, ease: shutterEase }, "<");
+    tl.to(leftRef.current, { right: "100%", duration: 1, ease: shutterEase }, "<");
+    tl.to(rightRef.current, { left: "100%", duration: 1, ease: shutterEase }, "<");
 
     return () => {
       tl.kill();
@@ -100,147 +87,59 @@ export function Preloader() {
       className="fixed inset-0 z-[100] h-dvh w-full overflow-hidden"
       aria-hidden="true"
     >
-      <div
-        ref={panelRef}
-        className="relative flex h-full w-full items-center justify-center bg-white will-change-transform"
-      >
-        {/* soft pulsing glow behind the mark */}
+      {/* four white shutters — together they cover the screen, then retract */}
+      <div ref={topRef} className="absolute left-0 right-0 bg-white will-change-[top,bottom]" />
+      <div ref={bottomRef} className="absolute left-0 right-0 bg-white will-change-[top,bottom]" />
+      <div ref={leftRef} className="absolute top-0 bottom-0 bg-white will-change-[left,right]" />
+      <div ref={rightRef} className="absolute top-0 bottom-0 bg-white will-change-[left,right]" />
+
+      {/* centered stack: frame line, lockup */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        {/* thin ink line that opens into a rectangular frame */}
         <div
-          className="pointer-events-none absolute h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(circle,rgba(11,11,11,0.06)_0%,rgba(11,11,11,0)_70%)] blur-2xl"
-          style={{ animation: "preloader-glow-pulse 3s ease-in-out infinite" }}
+          ref={frameRef}
+          className="absolute border border-wytes-ink/80 will-change-[width,height]"
         />
 
-        <div className="relative flex flex-col items-center">
-          {/*
-            The wordmark is drawn twice inside one SVG:
-            - a faint stroke-only version so the letters are always faintly visible
-            - a cream fill clipped by a sweeping rect, revealed as progress runs
-          */}
+        {/* WYTES lockup shown inside the frame */}
+        <div
+          ref={lockupRef}
+          className="relative z-[1] flex flex-col items-center will-change-transform"
+        >
           <svg
             viewBox="0 0 1000 320"
-            className="w-[72vw] max-w-[660px]"
+            className="w-[60vw] max-w-[560px]"
             role="img"
             aria-label="WYTES — The Complete Studio"
           >
-            <defs>
-              <clipPath id="preloader-word-clip">
-                {/* wordmark */}
-                <text
-                  x="500"
-                  y="223"
-                  textAnchor="middle"
-                  fontFamily="var(--font-anton), sans-serif"
-                  fontStyle="italic"
-                  fontWeight={400}
-                  fontSize="230"
-                  letterSpacing="0"
-                >
-                  {WORD}
-                </text>
-                {/* tagline — sits close beneath the wordmark */}
-                <text
-                  x="500"
-                  y="268"
-                  textAnchor="middle"
-                  textLength="500"
-                  lengthAdjust="spacing"
-                  fontFamily="var(--font-inter), sans-serif"
-                  fontWeight={300}
-                  fontSize="34"
-                >
-                  {TAGLINE}
-                </text>
-              </clipPath>
-              {/* tagline-only clip, used to knock its fill back to ~ink/40 */}
-              <clipPath id="preloader-tagline-clip">
-                <text
-                  x="500"
-                  y="268"
-                  textAnchor="middle"
-                  textLength="500"
-                  lengthAdjust="spacing"
-                  fontFamily="var(--font-inter), sans-serif"
-                  fontWeight={300}
-                  fontSize="34"
-                >
-                  {TAGLINE}
-                </text>
-              </clipPath>
-            </defs>
-
-            {/* solid pale placeholder of the lockup — the dark fill wipes through it */}
-            <g
-              ref={textRef}
+            <text
+              x="500"
+              y="223"
+              textAnchor="middle"
+              fontFamily="var(--font-anton), sans-serif"
+              fontStyle="italic"
+              fontWeight={400}
+              fontSize="230"
+              letterSpacing="0"
               fill="var(--color-wytes-ink)"
-              fillOpacity="0.12"
-              className="will-change-transform"
             >
-              <text
-                x="500"
-                y="223"
-                textAnchor="middle"
-                fontFamily="var(--font-anton), sans-serif"
-                fontStyle="italic"
-                fontWeight={400}
-                fontSize="230"
-                letterSpacing="0"
-              >
-                {WORD}
-              </text>
-              <text
-                x="500"
-                y="268"
-                textAnchor="middle"
-                textLength="500"
-                lengthAdjust="spacing"
-                fontFamily="var(--font-inter), sans-serif"
-                fontWeight={300}
-                fontSize="34"
-              >
-                {TAGLINE}
-              </text>
-            </g>
-
-            {/* ink fill, clipped to the lockup shapes, swept in by the rect */}
-            <g clipPath="url(#preloader-word-clip)">
-              <rect
-                ref={fillRef}
-                x="0"
-                y="0"
-                width="1000"
-                height="320"
-                fill="var(--color-wytes-ink)"
-                className="will-change-transform"
-              />
-            </g>
-
-            {/*
-              knock the tagline back to ~ink/40: a white veil at 60% opacity
-              over just the tagline glyphs, riding the same sweep as fillRef
-            */}
-            <g clipPath="url(#preloader-tagline-clip)">
-              <rect
-                ref={taglineVeilRef}
-                x="0"
-                y="0"
-                width="1000"
-                height="320"
-                fill="#ffffff"
-                fillOpacity="0.6"
-                className="will-change-transform"
-              />
-            </g>
+              {WORD}
+            </text>
+            <text
+              x="500"
+              y="268"
+              textAnchor="middle"
+              textLength="500"
+              lengthAdjust="spacing"
+              fontFamily="var(--font-inter), sans-serif"
+              fontWeight={300}
+              fontSize="34"
+              fill="var(--color-wytes-ink)"
+              fillOpacity="0.4"
+            >
+              {TAGLINE}
+            </text>
           </svg>
-
-          {/* progress % beneath the wordmark */}
-          <div className="mt-2 flex flex-col items-center">
-            <span
-              ref={percentRef}
-              className="relative text-center font-logo text-xs tracking-[0.3em] [text-indent:0.3em] text-wytes-ink/45 tabular-nums sm:text-md"
-            >
-              {String(percent).padStart(3, "0")}%
-            </span>
-          </div>
         </div>
       </div>
     </div>
