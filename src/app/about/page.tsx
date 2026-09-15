@@ -5,7 +5,6 @@ import { Philosophy } from "@/components/about/Philosophy";
 import { WhyWeExist } from "@/components/about/WhyWeExist";
 import { Approach } from "@/components/about/Approach";
 import { WhatWeBelieve } from "@/components/about/WhatWeBelieve";
-import { Team } from "@/components/about/Team";
 
 const ABOUT_DESCRIPTION =
   "Wytes Studio is a strategy-led branding and creative studio for businesses that are intentional about how they compete, communicate and command attention.";
@@ -38,7 +37,6 @@ export default function AboutPage() {
       <WhyWeExist />
       <Approach />
       <WhatWeBelieve />
-      <Team />
     </main>
   );
 }
